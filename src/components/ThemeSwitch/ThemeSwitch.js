@@ -25,13 +25,15 @@ const StyledThemeSwitch = styled.button`
   top: 7px;
   background: ${({ theme, selectedTheme }) =>
     selectedTheme === "light" ? theme.colors.black : theme.colors.skyblue};
-  border: none;
+  border: 2px solid
+    ${({ theme, selectedTheme }) =>
+      selectedTheme === "light" ? theme.colors.silver : theme.colors.gold};
   border-radius: 50%;
 
   img {
     position: relative;
     top: 1px;
-    right: 0.5px;
+    right: 2px;
   }
 `;
 

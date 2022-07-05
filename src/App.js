@@ -14,6 +14,7 @@ import Languages from "components/Languages/Languages";
 import Interests from "components/Interests/Interests";
 import Layout from "components/Layout/Layout";
 import ThemeSwitch from "components/ThemeSwitch/ThemeSwitch";
+import DownloadCVButton from "components/DownloadCVButton/DownloadCVButton";
 
 function App() {
   const {
@@ -37,6 +38,7 @@ function App() {
           <Languages languages={languages} />
           <Interests interests={interests} />
           <ThemeSwitch selectedTheme={theme} toggleTheme={toggleTheme} />
+          <DownloadCVButton />
         </BodyContainer>
       </Layout>
     </ThemeProvider>

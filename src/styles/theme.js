@@ -29,6 +29,8 @@ const BASIC_COLORS = {
   black: "#000",
   silver: "#e3e4e5",
   skyblue: "#13b1e9",
+  gold: "#FFD700",
+  white: "#fff",
 };
 
 export const lightColors = {
