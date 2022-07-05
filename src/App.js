@@ -1,24 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from "styles/globalStyles";
+import { lightTheme, darkTheme } from "styles/theme";
+
+import Header from "components/Header/Header";
+import BodyContainer from "components/BodyContainer/BodyContainer";
+import WorkExperience from "components/WorkExperience/WorkExperience";
+
+import CVData from "mocks/mock.json";
+import Skills from "components/Skills/Skills";
+import Education from "components/Education/Education";
+import Languages from "components/Languages/Languages";
+import Interests from "components/Interests/Interests";
+import Layout from "components/Layout/Layout";
 
 function App() {
+  const {
+    data: { header, experience, skills, education, languages, interests },
+  } = CVData;
+
+  const [theme, setTheme] = useState("light");
+  const themeToggler = () => {
+    theme === "light" ? setTheme("dark") : setTheme("light");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <GlobalStyles />
+      <Layout>
+        <Header header={header} />
+        <BodyContainer>
+          <WorkExperience experience={experience} />
+          <Skills skills={skills} />
+          <Education education={education} />
+          <Languages languages={languages} />
+          <Interests interests={interests} />
+          <button onClick={themeToggler}>Switch Theme</button>
+        </BodyContainer>
+      </Layout>
+    </ThemeProvider>
   );
 }
 

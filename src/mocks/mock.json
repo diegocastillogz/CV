@@ -1,0 +1,170 @@
+{
+  "data": {
+    "header": {
+      "fullname": "Diego Castillo",
+      "position": "Software Developer",
+      "description": "Developer with more than four years of experience in application development and design guided by agile methodologies specialized in process enhancement focusing on the client's necessities. Experience in product design, testing, building, release, and maintenance of different software products, such as finance, education, commerce, and automotive companies.",
+      "socialNetworks": [
+        {
+          "text": "diegorlando5@gmail.com",
+          "href": "mailto:diegorlando5@gmail.com",
+          "image": "email",
+          "alt": "email address"
+        },
+        {
+          "text": "diegocastillogz",
+          "href": "https://github.com/diegocastillogz",
+          "image": "github",
+          "alt": "github profile"
+        },
+        {
+          "text": "diegocastillogz",
+          "href": "https://www.linkedin.com/in/diegocastillogz",
+          "image": "linkedin",
+          "alt": "linkedin profile"
+        },
+        {
+          "text": "Bogotá, Colombia",
+          "image": "location",
+          "alt": "location"
+        }
+      ]
+    },
+    "experience": [
+      {
+        "position": "fullstack developer",
+        "company": "universidad distrital francisco josé de caldas",
+        "url": "https://www.udistrital.edu.co",
+        "date": "Oct 18, 2016 - Nov 27, 2017",
+        "location": "Bogotá, Colombia",
+        "description": [
+          "Develop web applications based on the university requirements to make easier processes for the personnel",
+          "working on the university teacher salary system that allows making payments in a more efficient way saving a lot of time",
+          "AngularJS, Javascript, Golang, CSS, and HTML."
+        ]
+      },
+      {
+        "position": "frontend Developer",
+        "company": "omniLatam",
+        "url": "https://omnilatam.com",
+        "date": "Mar 1, 2018 - Feb 11, 2019",
+        "location": "Colombia - Chile",
+        "description": [
+          "Developing web applications to manage a loan system to SMEs from Chile",
+          "Based on all the requirements with specifications to calculate  loans, interest, arrears, payments, and authentication system",
+          "AngularJS, React, Javascript, react-testing-library, CSS, and HTML."
+        ]
+      },
+      {
+        "position": "fullstack developer",
+        "company": "resuelve tu deuda",
+        "url": "https://resuelvetudeuda.com",
+        "date": "Feb 13, 2019 - Jul 4, 2021",
+        "location": "Colombia - México",
+        "description": [
+          "Developing web applications to manage a loan and investing system for people in Mexico, often, talking directly with people",
+          "also developing the web application that allows people to manage and consult their payments taking into consideration different",
+          "React, jest, enzyme, react-testing-library, Gatsby, E2E testing with Cypress, cypress-testing-library, SASS, SCSS"
+        ]
+      },
+      {
+        "position": "senior analyst - IT",
+        "company": "mercadoLibre",
+        "url": "https://www.mercadolibre.com",
+        "date": "Sep 13, 2021 - Abr 22, 2021",
+        "location": "Colombia - Argentina",
+        "description": [
+          "Developing web applications to manage a loan and investing system for people in Mexico, often, talking directly with people",
+          "developing the web application that allows people to manage and consult their payments taking into consideration different",
+          "React, jest, enzyme, react-testing-library, Gatsby, E2E testing with Cypress"
+        ]
+      },
+      {
+        "position": "frontend developer",
+        "company": "encora (AndGo Goodyear)",
+        "url": "https://www.encora.com/",
+        "date": "Abr 28, 2021 - current work",
+        "location": "Colombia - United States",
+        "description": [
+          "their main product is a platform to help companies to certify on different standards like GDPR or ISO certifications",
+          "developing the platform that allows auditors to manage all the associated companies information, involving on all the flow of",
+          "React, jest, enzyme, react-testing-library, Gatsby, E2E testing with Cypress"
+        ]
+      }
+    ],
+    "skills": [
+      {
+        "text": "HTML",
+        "score": 4
+      },
+      {
+        "text": "CSS",
+        "score": 4
+      },
+      {
+        "text": "javascript",
+        "score": 4
+      },
+      {
+        "text": "react",
+        "score": 5
+      },
+      {
+        "text": "redux",
+        "score": 3
+      },
+      {
+        "text": "remix",
+        "score": 2
+      },
+      {
+        "text": "unit testing",
+        "score": 4
+      },
+      {
+        "text": "E2E testing",
+        "score": 3
+      },
+      {
+        "text": "angular",
+        "score": 3
+      },
+      {
+        "text": "docker",
+        "score": 2
+      },
+      {
+        "text": "AWS",
+        "score": 2
+      },
+      {
+        "text": "python",
+        "score": 3
+      },
+      {
+        "text": "golang",
+        "score": 3
+      }
+    ],
+    "education": [
+      {
+        "title": "Systems Engineer",
+        "institute": "Universidad Distrital Francisco José de Caldas",
+        "href": "https://www.udistrital.edu.co",
+        "date": "Jun, 2010 - Oct, 2016",
+        "location": "Bogotá, Colombia"
+      }
+    ],
+    "languages": [
+      {
+        "language": "spanish",
+        "score": 5
+      },
+      {
+        "language": "english",
+        "score": 4
+      }
+    ],
+    "interests": ["videogames", "sports", "3D modelling", "technology", "music"]
+  }
+}
