@@ -69,20 +69,23 @@ const paddings = {
   LGVerticalPadding: "50px",
 };
 
-export const lightTheme = {
+const COMMON_STYLES = {
   maxWidthScreen: breakpoints.laptop,
   maxWidthScreenMobile: "80vw",
+};
+
+export const lightTheme = {
   paddings,
   fonts,
   breakpoints,
   colors: lightColors,
+  ...COMMON_STYLES,
 };
 
 export const darkTheme = {
-  maxWidthScreen: breakpoints.laptop,
-  maxWidthScreenMobile: "80vw",
   paddings,
   fonts,
   breakpoints,
   colors: darkColors,
+  ...COMMON_STYLES,
 };

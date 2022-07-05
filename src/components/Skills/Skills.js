@@ -53,6 +53,9 @@ const StyledItemSkillContainer = styled.li`
 
   p {
     text-transform: capitalize;
+    &::before {
+      display: none;
+    }
   }
 `;
 
