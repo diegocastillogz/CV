@@ -80,7 +80,21 @@ export const GlobalStyles = createGlobalStyle`
     }
   }
 
+  section ul {
+    list-style: none;
+    li {
+    margin-bottom: 15px;
 
+    p::before {
+      content: "\\2022";
+      color: ${({ theme }) => theme.colors.subtitleFontColor};
+      font-weight: bolder;
+      display: inline-block;
+      width: 1em;
+      margin-left: -1em;
+    }
+  }
+  }
 
   a {
     text-decoration: none;

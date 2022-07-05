@@ -1,8 +1,11 @@
-import styled from "styled-components";
+import { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 
-import linkIcon from "assets/icons/link.svg";
+import { LinkIcon } from "assets/icons";
 
 const Education = ({ education }) => {
+  const { colors } = useContext(ThemeContext);
+
   return (
     <StyledEducationSection>
       <h2>Education</h2>
@@ -17,7 +20,7 @@ const Education = ({ education }) => {
               rel="noopener noreferrer"
             >
               <h3>{institute}</h3>
-              <img src={linkIcon} alt={`${institute} website`} />
+              <LinkIcon color={colors.subtitleFontColor} />
             </StyledEducationLink>
             <StyledDateAndLocation>
               <p>{date}</p>

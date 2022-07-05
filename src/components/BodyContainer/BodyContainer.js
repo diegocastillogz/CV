@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 const BodyContainer = styled.div`
   width: 100%;
+  padding-bottom: ${({ theme }) => `${theme.paddings.MDVerticalPadding}`};
+
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     display: grid;
     grid-template-areas:
@@ -13,6 +15,7 @@ const BodyContainer = styled.div`
       calc(50% - ${({ theme }) => theme.paddings.MDHorizontalPadding} - 25px)
       calc(50% - ${({ theme }) => theme.paddings.MDHorizontalPadding} - 25px);
     grid-column-gap: 50px;
+    padding-bottom: 0px;
   }
 
   h2 {

@@ -1,8 +1,10 @@
-import styled from "styled-components";
+import { useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 
-import linkIcon from "assets/icons/link.svg";
+import { LinkIcon } from "assets/icons";
 
 const WorkExperience = ({ experience }) => {
+  const { colors } = useContext(ThemeContext);
   return (
     <StyledWorkExperienceSection>
       <h2>work experience</h2>
@@ -12,7 +14,7 @@ const WorkExperience = ({ experience }) => {
             <h3>{position}</h3>
             <StyledLink href={url} target="_blank" rel="noopener noreferrer">
               <h3>{company}</h3>
-              <img src={linkIcon} alt={`${company} website`} />
+              <LinkIcon color={colors.subtitleFontColor} />
             </StyledLink>
             <StyledDateAndLocation>
               <p>{date}</p>
@@ -66,7 +68,9 @@ const StyledExperienceItem = styled.section`
 
 const StyledDateAndLocation = styled.div`
   margin: 8px 0;
-  color: ${({ theme }) => theme.colors.subtitleFontColor};
+  p {
+    color: ${({ theme }) => theme.colors.subtitleFontColor};
+  }
 `;
 
 const StyledResponsibilityList = styled.ul`
@@ -79,8 +83,10 @@ const StyledResponsibilityItem = styled.li`
 
   &:last-child {
     list-style: none;
-    color: ${({ theme }) => theme.colors.subtitleFontColor};
-    font-weight: 500;
+    p {
+      color: ${({ theme }) => theme.colors.subtitleFontColor};
+      font-weight: 600;
+    }
   }
 `;
 

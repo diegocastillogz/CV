@@ -9,8 +9,8 @@ const ThemeSwitch = ({ toggleTheme, selectedTheme }) => {
         src={selectedTheme === "light" ? moonIcon : sunImage}
         alt={
           selectedTheme === "light"
-            ? "light theme selected"
-            : "dark theme selected"
+            ? "light mode selected"
+            : "dark mode selected"
         }
       />
     </StyledThemeSwitch>

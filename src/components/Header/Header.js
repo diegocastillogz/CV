@@ -1,27 +1,32 @@
-import { useCallback } from "react";
-import styled from "styled-components";
+import { useCallback, useContext } from "react";
+import styled, { ThemeContext } from "styled-components";
 
 import profileImage from "assets/profile.jpg";
-import locationImage from "assets/icons/location.svg";
-import linkedinImage from "assets/icons/linkedin.svg";
-import githubImage from "assets/icons/github.svg";
-import emailIcon from "assets/icons/email.svg";
+import {
+  EmailIcon,
+  GithubIcon,
+  LinkedinIcon,
+  LocationIcon,
+} from "assets/icons";
 
 const Header = ({ header }) => {
-  const getImageIcon = useCallback((image) => {
-    switch (image) {
-      case "email":
-        return emailIcon;
-      case "location":
-        return locationImage;
-      case "linkedin":
-        return linkedinImage;
-      case "github":
-        return githubImage;
-      default:
-        return "";
-    }
-  }, []);
+  const { colors } = useContext(ThemeContext);
+
+  const getImageIcon = useCallback(
+    (image) => {
+      switch (image) {
+        case "email":
+          return <EmailIcon color={colors.textFontColor} />;
+        case "linkedin":
+          return <LinkedinIcon color={colors.textFontColor} />;
+        case "github":
+          return <GithubIcon color={colors.textFontColor} />;
+        default:
+          return "";
+      }
+    },
+    [colors]
+  );
 
   return (
     <StyledHeader>
@@ -36,12 +41,12 @@ const Header = ({ header }) => {
         <StyledDescription>{header.description}</StyledDescription>
       </StyledPrimaryInfoContainer>
       <StyledLSocialNetworkist>
-        {header.socialNetworks?.map(({ href, alt, image, text }, index) => {
+        {header.socialNetworks?.map(({ href, image, text }, index) => {
           if (href) {
             return (
               <StyledSocialNetworksItem key={index}>
                 <a href={href} target="_blank" rel="noopener noreferrer">
-                  <img src={getImageIcon(image)} alt={alt} />
+                  {getImageIcon(image)}
                   <p>{text}</p>
                 </a>
               </StyledSocialNetworksItem>
@@ -50,7 +55,7 @@ const Header = ({ header }) => {
           return (
             <StyledSocialNetworksItem key={index}>
               <div>
-                <img src={locationImage} alt={alt} />
+                <LocationIcon color={colors.textFontColor} />
                 <p>{text}</p>
               </div>
             </StyledSocialNetworksItem>
@@ -158,8 +163,9 @@ const StyledSocialNetworksItem = styled.li`
     color: ${({ theme }) => theme.colors.textFontColor};
     &:hover {
       color: ${({ theme }) => theme.colors.subtitleFontColor};
-      img {
-        filter: invert(1);
+      font-weight: 600;
+      svg path {
+        fill: ${({ theme }) => theme.colors.subtitleFontColor};
       }
     }
     @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
