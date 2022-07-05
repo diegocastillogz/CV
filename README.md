@@ -6,12 +6,14 @@
 - Commit SSR static rendering
 - Data on graphql DB
 
-## CV PDF
+### CV PDF
 
-## Light Mode
+[DiegoCastilloCV](/public/DiegoCastilloCV.pdf)
+
+### Light Mode
 
 ![LigtModeCV](/public/lightMode.png?raw=true "Dark Mode CV image")
 
-## Dark Mode
+### Dark Mode
 
 ![DarkModeCV](/public/darkMode.png?raw=true "Dark Mode CV image")
