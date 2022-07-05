@@ -1,13 +1,14 @@
 {
   "files": {
-    "main.js": "/CV/static/js/main.05f7b0ed.js",
+    "main.js": "/CV/static/js/main.7da5a738.js",
+    "static/media/DiegoCastilloCV.pdf": "/CV/static/media/DiegoCastilloCV.c138e5edf1425d6619f6.pdf",
     "static/media/profile.jpg": "/CV/static/media/profile.239c3e0c9c72e17ae02f.jpg",
     "static/media/moon.svg": "/CV/static/media/moon.1d677304a7eb41a62378d5b1b866f8d8.svg",
     "index.html": "/CV/index.html",
-    "static/media/sun.svg": "/CV/static/media/sun.be340bdcf20a13c851febfaaa19cd265.svg",
-    "main.05f7b0ed.js.map": "/CV/static/js/main.05f7b0ed.js.map"
+    "static/media/sun.svg": "/CV/static/media/sun.d907058cf0ec6ecdcc9737ddcbd2573d.svg",
+    "main.7da5a738.js.map": "/CV/static/js/main.7da5a738.js.map"
   },
   "entrypoints": [
-    "static/js/main.05f7b0ed.js"
+    "static/js/main.7da5a738.js"
   ]
 }
