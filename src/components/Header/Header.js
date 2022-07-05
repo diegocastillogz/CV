@@ -103,7 +103,7 @@ const StyledProfileImage = styled.img`
   border: 5px solid ${({ theme }) => theme.colors.subtitleFontColor};
   margin: 10px 0;
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
-    margin: ${({ theme }) => `${theme.paddings.MDVerticalPadding} 0`};
+    margin: ${({ theme }) => `${theme.paddings.XXSVerticalPadding} 0`};
     width: 150px;
     height: 150px;
   }
@@ -113,6 +113,9 @@ const StyledSubtitle = styled.h2`
   grid-area: subtitle;
   color: ${({ theme }) => theme.colors.subtitleFontColor};
   margin-bottom: 15px;
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    margin-bottom: 10px;
+  }
 `;
 
 const StyledDescription = styled.p`
