@@ -62,15 +62,15 @@ const Header = ({ header }) => {
 };
 
 const StyledHeader = styled.header`
-  background: ${({ theme }) => theme.headerBackground};
-  color: ${({ theme }) => theme.textFontColor};
+  background: ${({ theme }) => theme.colors.headerBackground};
+  color: ${({ theme }) => theme.colors.textFontColor};
 `;
 
 const StyledPrimaryInfoContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: ${({ theme }) => `15px ${theme.XSHorizontalPadding} 0`};
+  padding: ${({ theme }) => `15px ${theme.paddings.XSHorizontalPadding} 0`};
 
   h1 {
     grid-area: title;
@@ -83,7 +83,7 @@ const StyledPrimaryInfoContainer = styled.div`
       "subtitle profileImage"
       "description profileImage";
     padding: ${({ theme }) =>
-      `${theme.MDVerticalPadding} ${theme.MDVerticalPadding} ${theme.XSVerticalPadding}`};
+      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDVerticalPadding} ${theme.paddings.XSVerticalPadding}`};
   }
 `;
 
@@ -95,10 +95,10 @@ const StyledProfileImage = styled.img`
   border-top-right-radius: 50%;
   border-bottom-left-radius: 50%;
   border-bottom-right-radius: 20px;
-  border: 5px solid ${({ theme }) => theme.subtitleFontColor};
+  border: 5px solid ${({ theme }) => theme.colors.subtitleFontColor};
   margin: 10px 0;
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
-    margin: auto;
+    margin: ${({ theme }) => `${theme.paddings.MDVerticalPadding} 0`};
     width: 150px;
     height: 150px;
   }
@@ -106,14 +106,14 @@ const StyledProfileImage = styled.img`
 
 const StyledSubtitle = styled.h2`
   grid-area: subtitle;
-  color: ${({ theme }) => theme.subtitleFontColor};
+  color: ${({ theme }) => theme.colors.subtitleFontColor};
   margin-bottom: 15px;
 `;
 
 const StyledDescription = styled.p`
   grid-area: description;
   font-size: ${({ theme }) => theme.paragraphSize};
-  line-height: ${({ theme }) => theme.lineHeight};
+  line-height: 25px;
   margin-bottom: 10px;
   text-align: justify;
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
@@ -128,14 +128,14 @@ const StyledLSocialNetworkist = styled.ul`
   display: flex;
   list-style: none;
   flex-wrap: wrap;
-  background: ${({ theme }) => theme.subheaderBackground};
+  background: ${({ theme }) => theme.colors.subheaderBackground};
   padding: ${({ theme }) =>
-    `${theme.XSVerticalPadding} ${theme.XSHorizontalPadding}`};
+    `${theme.paddings.XSVerticalPadding} ${theme.paddings.XSHorizontalPadding}`};
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
     display: flex;
     padding: ${({ theme }) =>
-      `${theme.XXSVerticalPadding} ${theme.XSHorizontalPadding}`};
+      `${theme.paddings.XXSVerticalPadding} ${theme.paddings.XSHorizontalPadding}`};
   }
 `;
 
@@ -155,9 +155,9 @@ const StyledSocialNetworksItem = styled.li`
   div {
     display: flex;
     align-items: center;
-    color: ${({ theme }) => theme.textFontColor};
+    color: ${({ theme }) => theme.colors.textFontColor};
     &:hover {
-      color: ${({ theme }) => theme.subtitleFontColor};
+      color: ${({ theme }) => theme.colors.subtitleFontColor};
       img {
         filter: invert(1);
       }

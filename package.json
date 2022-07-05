@@ -1,5 +1,6 @@
 {
-  "name": "responsive-cv",
+  "homepage": "https://diegocastillogz.github.io/CV",
+  "name": "diego-castillo-cv",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -37,8 +40,10 @@
     ]
   },
   "devDependencies": {
+    "@types/node": "^18.0.1",
     "eslint": "^8.19.0",
     "eslint-plugin-react": "^7.30.1",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^4.0.0"
   }
 }

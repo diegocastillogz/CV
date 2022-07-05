@@ -17,7 +17,7 @@ const Interests = ({ interests }) => {
 
 const StyledInterestsSection = styled.section`
   padding: ${({ theme }) =>
-    `${theme.MDVerticalPadding} ${theme.XSHorizontalPadding} 0`};
+    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
   grid-area: interests;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
@@ -27,14 +27,14 @@ const StyledInterestsSection = styled.section`
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     padding: ${({ theme }) =>
-      `${theme.MDVerticalPadding} ${theme.MDHorizontalPadding} 0`};
+      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDHorizontalPadding} 0`};
 
     width: 100%;
   }
 `;
 
 const StyledInterestsList = styled.ul`
-  padding: ${({ theme }) => `0 ${theme.XSHorizontalPadding}`};
+  padding: ${({ theme }) => `0 ${theme.paddings.XSHorizontalPadding}`};
 
   li {
     margin-bottom: 15px;

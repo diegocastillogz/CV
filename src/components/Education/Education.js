@@ -32,7 +32,7 @@ const Education = ({ education }) => {
 
 const StyledEducationSection = styled.section`
   padding: ${({ theme }) =>
-    `${theme.MDVerticalPadding} ${theme.XSHorizontalPadding} 0`};
+    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
   grid-area: education;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
@@ -42,7 +42,7 @@ const StyledEducationSection = styled.section`
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     padding: ${({ theme }) =>
-      `${theme.MDVerticalPadding} ${theme.MDHorizontalPadding} 0`};
+      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDHorizontalPadding} 0`};
     width: 100%;
   }
 `;
@@ -68,7 +68,7 @@ const StyledEducationLink = styled.a`
 
 const StyledDateAndLocation = styled.div`
   margin: 8px 0;
-  color: ${({ theme }) => theme.subtitleFontColor};
+  color: ${({ theme }) => theme.colors.subtitleFontColor};
 `;
 
 export default Education;

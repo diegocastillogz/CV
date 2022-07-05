@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
   }
 
   body {
-    background: ${({ theme }) => theme.black};
+    background: ${({ theme }) => theme.colors.black};
     font-family: "Montserrat", sans-serif;
   }
    
@@ -36,7 +36,7 @@ export const GlobalStyles = createGlobalStyle`
 
   h2 {
     font-size: ${({ theme }) => theme.fonts.small.subtitle};
-    color: ${({ theme }) => theme.subtitleFontColor};
+    color: ${({ theme }) => theme.colors.subtitleFontColor};
     font-weight: 500;
     text-transform: capitalize;
 
@@ -63,8 +63,11 @@ export const GlobalStyles = createGlobalStyle`
 
   section p {
     font-size: ${({ theme }) => theme.fonts.small.sectionParagraph};
+    color: ${({ theme }) => theme.colors.paragraphColor};
 
-    @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+
+    @media (min-width: ${({ theme }) =>
+      `${theme.breakpoints.titleFontColor}`}) {
       font-size: ${({ theme }) => theme.fonts.big.sectionParagraph};
     }
   }

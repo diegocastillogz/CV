@@ -34,7 +34,7 @@ const WorkExperience = ({ experience }) => {
 
 const StyledWorkExperienceSection = styled.section`
   padding: ${({ theme }) =>
-    `${theme.MDVerticalPadding} ${theme.XSHorizontalPadding} 0`};
+    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
   grid-area: experience;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
@@ -44,13 +44,13 @@ const StyledWorkExperienceSection = styled.section`
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     padding: ${({ theme }) =>
-      `${theme.MDVerticalPadding} ${theme.MDHorizontalPadding} 0`};
+      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDHorizontalPadding} 0`};
     width: 100%;
   }
 `;
 
 const StyledExperienceItem = styled.section`
-  padding-bottom: ${({ theme }) => `${theme.MDVerticalPadding} `};
+  padding-bottom: ${({ theme }) => `${theme.paddings.MDVerticalPadding} `};
   &:last-child {
     padding-bottom: 20px;
   }
@@ -60,17 +60,17 @@ const StyledExperienceItem = styled.section`
   }
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
-    padding-bottom: ${({ theme }) => `${theme.MDVerticalPadding} `};
+    padding-bottom: ${({ theme }) => `${theme.paddings.MDVerticalPadding} `};
   }
 `;
 
 const StyledDateAndLocation = styled.div`
   margin: 8px 0;
-  color: ${({ theme }) => theme.subtitleFontColor};
+  color: ${({ theme }) => theme.colors.subtitleFontColor};
 `;
 
 const StyledResponsibilityList = styled.ul`
-  padding: ${({ theme }) => `0 ${theme.XSHorizontalPadding}`};
+  padding: ${({ theme }) => `0 ${theme.paddings.XSHorizontalPadding}`};
 `;
 
 const StyledResponsibilityItem = styled.li`
@@ -79,7 +79,7 @@ const StyledResponsibilityItem = styled.li`
 
   &:last-child {
     list-style: none;
-    color: ${({ theme }) => theme.subtitleFontColor};
+    color: ${({ theme }) => theme.colors.subtitleFontColor};
     font-weight: 500;
   }
 `;

@@ -10,22 +10,22 @@ const BodyContainer = styled.div`
       "experience languages"
       "experience interests";
     grid-template-columns:
-      calc(50% - ${({ theme }) => theme.MDHorizontalPadding} - 25px)
-      calc(50% - ${({ theme }) => theme.MDHorizontalPadding} - 25px);
+      calc(50% - ${({ theme }) => theme.paddings.MDHorizontalPadding} - 25px)
+      calc(50% - ${({ theme }) => theme.paddings.MDHorizontalPadding} - 25px);
     grid-column-gap: 50px;
   }
 
   h2 {
     text-decoration: underline;
-    margin-bottom: ${({ theme }) => theme.XSVerticalPadding};
+    margin-bottom: ${({ theme }) => theme.paddings.XSVerticalPadding};
   }
 
   h3 {
-    color: ${({ theme }) => theme.titleFontColor};
+    color: ${({ theme }) => theme.colors.titleFontColor};
   }
 
   a p {
-    color: ${({ theme }) => theme.titleFontColor};
+    color: ${({ theme }) => theme.colors.titleFontColor};
   }
 `;
 

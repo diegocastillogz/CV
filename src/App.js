@@ -13,6 +13,7 @@ import Education from "components/Education/Education";
 import Languages from "components/Languages/Languages";
 import Interests from "components/Interests/Interests";
 import Layout from "components/Layout/Layout";
+import ThemeSwitch from "components/ThemeSwitch/ThemeSwitch";
 
 function App() {
   const {
@@ -20,7 +21,7 @@ function App() {
   } = CVData;
 
   const [theme, setTheme] = useState("light");
-  const themeToggler = () => {
+  const toggleTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
 
@@ -35,7 +36,7 @@ function App() {
           <Education education={education} />
           <Languages languages={languages} />
           <Interests interests={interests} />
-          <button onClick={themeToggler}>Switch Theme</button>
+          <ThemeSwitch selectedTheme={theme} toggleTheme={toggleTheme} />
         </BodyContainer>
       </Layout>
     </ThemeProvider>

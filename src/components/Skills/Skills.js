@@ -32,7 +32,7 @@ const Skills = ({ skills }) => {
 const StyleSkillsSection = styled.section`
   grid-area: skills;
   padding: ${({ theme }) =>
-    `${theme.MDVerticalPadding} ${theme.XSHorizontalPadding} 0`};
+    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
     width: ${({ theme }) => `${theme.maxWidthScreenMobile}`};
@@ -42,7 +42,7 @@ const StyleSkillsSection = styled.section`
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     width: 100%;
     padding: ${({ theme }) =>
-      `${theme.MDVerticalPadding} ${theme.MDHorizontalPadding} 0`};
+      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDHorizontalPadding} 0`};
   }
 `;
 
@@ -66,17 +66,17 @@ const StyledEmptyDot = styled.div`
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px ${({ theme }) => theme.subtitleFontColor};
-  border: 2px solid ${({ theme }) => theme.textFontColor};
+  box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.subtitleFontColor};
+  border: 2px solid ${({ theme }) => theme.colors.textFontColor};
 `;
 
 const StyledFillDot = styled.div`
   height: 10px;
   width: 10px;
   border-radius: 50%;
-  box-shadow: 0 0 0 2px ${({ theme }) => theme.subtitleFontColor};
-  border: 2px solid ${({ theme }) => theme.textFontColor};
-  background-color: ${({ theme }) => theme.subtitleFontColor};
+  box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.subtitleFontColor};
+  border: 2px solid ${({ theme }) => theme.colors.textFontColor};
+  background-color: ${({ theme }) => theme.colors.subtitleFontColor};
 `;
 
 export default Skills;
