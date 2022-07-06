@@ -13,7 +13,6 @@ const DownloadCVButton = ({ selectedTheme }) => {
       href={selectedTheme === "light" ? CVFile : CVDMFile}
       download="DiegoCastilloCV"
     >
-      {console.log({ selectedTheme })}
       <DownloadIcon color={colors.subtitleFontColor} />
     </StyledDownloadCVButton>
   );
