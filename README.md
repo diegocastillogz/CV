@@ -8,7 +8,9 @@
 
 ### CV PDF
 
-[DiegoCastilloCV](/src/files/DiegoCastilloCV.pdf)
+[Light Mode CV](/src/files/DiegoCastilloCV.pdf)
+
+[Dark Mode CV](/src/files/DiegoCastilloCV.pdf)
 
 ### Light Mode
 

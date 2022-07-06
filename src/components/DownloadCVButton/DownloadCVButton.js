@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 import CVFile from "files/DiegoCastilloCV.pdf";
+import CVDMFile from "files/DiegoCastilloCVDM.pdf";
 
 import { DownloadIcon } from "assets/icons";
 
@@ -10,8 +11,7 @@ const DownloadCVButton = ({ toggleTheme, selectedTheme }) => {
   return (
     <StyledDownloadCVButton
       onClick={toggleTheme}
-      selectedTheme={selectedTheme}
-      href={CVFile}
+      href={selectedTheme === "light" ? CVFile : CVDMFile}
       download="DiegoCastilloCV"
     >
       <DownloadIcon color={colors.subtitleFontColor} />
