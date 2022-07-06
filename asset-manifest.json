@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/CV/static/js/main.3ab75590.js",
-    "static/media/DiegoCastilloCVDM.pdf": "/CV/static/media/DiegoCastilloCVDM.de6852f31dfe958a416c.pdf",
-    "static/media/DiegoCastilloCV.pdf": "/CV/static/media/DiegoCastilloCV.c138e5edf1425d6619f6.pdf",
+    "main.js": "/CV/static/js/main.7327a462.js",
+    "static/media/DiegoCastilloCV.pdf": "/CV/static/media/DiegoCastilloCV.d3d4f6d7818c554e0d80.pdf",
+    "static/media/DiegoCastilloCVDM.pdf": "/CV/static/media/DiegoCastilloCVDM.4e7937375ffe8cbe0157.pdf",
     "static/media/profile.jpg": "/CV/static/media/profile.239c3e0c9c72e17ae02f.jpg",
-    "static/media/moon.svg": "/CV/static/media/moon.1d677304a7eb41a62378d5b1b866f8d8.svg",
+    "static/media/moon.svg": "/CV/static/media/moon.a971e14c8cf4690c6a63f3322e2fc29e.svg",
     "index.html": "/CV/index.html",
-    "static/media/sun.svg": "/CV/static/media/sun.d907058cf0ec6ecdcc9737ddcbd2573d.svg",
-    "main.3ab75590.js.map": "/CV/static/js/main.3ab75590.js.map"
+    "static/media/sun.svg": "/CV/static/media/sun.bd3915937109ad95ebbab85846e8d014.svg",
+    "main.7327a462.js.map": "/CV/static/js/main.7327a462.js.map"
   },
   "entrypoints": [
-    "static/js/main.3ab75590.js"
+    "static/js/main.7327a462.js"
   ]
 }
