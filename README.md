@@ -1,5 +1,8 @@
 # Responsive CV
 
+## Watch live demo
+https://diegocastillogz.github.io/CV/
+
 ## Following features
 
 - PDF CV generation
