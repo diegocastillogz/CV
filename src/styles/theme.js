@@ -14,7 +14,8 @@ const fonts = {
     subtitle: "14px",
     sectionParagraph: "12px",
     sectionTitle: "14px",
-    headerParagraph: "13px",
+    headerParagraph: "11px",
+    label: "11px",
   },
   big: {
     title: "26px",
@@ -22,6 +23,7 @@ const fonts = {
     sectionParagraph: "14px",
     sectionTitle: "16px",
     headerParagraph: "13px",
+    label: "10px",
   },
 };
 

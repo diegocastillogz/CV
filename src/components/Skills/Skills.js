@@ -5,22 +5,25 @@ const Skills = ({ skills }) => {
     <StyleSkillsSection>
       <h2>skills</h2>
       <ul>
-        {skills?.map(({ text, score }, index) => {
+        {skills?.map(({ text, score, label }, index) => {
           const filledDots = score;
           const unfilledDots = 5 - filledDots;
           return (
             <StyledItemSkillContainer key={index}>
               <p>{text}</p>
-              <StyledDotsContainer>
-                {[...Array.from({ length: filledDots })]?.map((_, index) => (
-                  <StyledFillDot key={index} />
-                ))}
-                {[...Array.from({ length: unfilledDots }).keys()]?.map(
-                  (_, index) => (
-                    <StyledEmptyDot key={index} />
-                  )
-                )}
-              </StyledDotsContainer>
+              <StyledScore>
+                <StyledScoreLabel>{label}</StyledScoreLabel>
+                <StyledDotsContainer>
+                  {[...Array.from({ length: filledDots })]?.map((_, index) => (
+                    <StyledFillDot key={index} />
+                  ))}
+                  {[...Array.from({ length: unfilledDots }).keys()]?.map(
+                    (_, index) => (
+                      <StyledEmptyDot key={index} />
+                    )
+                  )}
+                </StyledDotsContainer>
+              </StyledScore>
             </StyledItemSkillContainer>
           );
         })}
@@ -48,11 +51,21 @@ const StyleSkillsSection = styled.section`
 
 const StyledItemSkillContainer = styled.li`
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    margin-bottom: 20px;
+    flex-direction: row;
+  }
   p {
     text-transform: capitalize;
+    margin-bottom: 3px;
+    @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+      margin-bottom: 0px;
+    }
     &::before {
       display: none;
     }
@@ -61,8 +74,14 @@ const StyledItemSkillContainer = styled.li`
 
 const StyledDotsContainer = styled.div`
   display: flex;
-  width: 50%;
+  width: 80%;
   justify-content: space-between;
+  margin-top: 5px;
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    width: 50%;
+    margin: auto 0;
+  }
 `;
 
 const StyledEmptyDot = styled.div`
@@ -80,6 +99,32 @@ const StyledFillDot = styled.div`
   box-shadow: 0 0 0 2px ${({ theme }) => theme.colors.subtitleFontColor};
   border: 2px solid ${({ theme }) => theme.colors.textFontColor};
   background-color: ${({ theme }) => theme.colors.subtitleFontColor};
+`;
+
+const StyledScore = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    width: 80%;
+    justify-content: flex-end;
+    flex-direction: row;
+  }
+`;
+
+const StyledScoreLabel = styled.p`
+  color: ${({ theme }) => theme.colors.subtitleFontColor};
+  font-weight: 500;
+  font-size: ${({ theme }) => theme.fonts.small.label};
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    font-size: ${({ theme }) => theme.fonts.big.label};
+    width: 20%;
+    margin: auto 0;
+  }
 `;
 
 export default Skills;

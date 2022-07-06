@@ -5,15 +5,15 @@ import CVDMFile from "files/DiegoCastilloCVDM.pdf";
 
 import { DownloadIcon } from "assets/icons";
 
-const DownloadCVButton = ({ toggleTheme, selectedTheme }) => {
+const DownloadCVButton = ({ selectedTheme }) => {
   const { colors } = useContext(ThemeContext);
 
   return (
     <StyledDownloadCVButton
-      onClick={toggleTheme}
       href={selectedTheme === "light" ? CVFile : CVDMFile}
       download="DiegoCastilloCV"
     >
+      {console.log({ selectedTheme })}
       <DownloadIcon color={colors.subtitleFontColor} />
     </StyledDownloadCVButton>
   );

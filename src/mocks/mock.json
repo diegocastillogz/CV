@@ -95,55 +95,68 @@
     "skills": [
       {
         "text": "HTML",
-        "score": 4
+        "score": 4,
+        "label": "extensive"
       },
       {
         "text": "CSS",
-        "score": 4
+        "score": 4,
+        "label": "extensive"
       },
       {
         "text": "javascript",
-        "score": 4
+        "score": 4,
+        "label": "extensive"
       },
       {
         "text": "react",
-        "score": 5
+        "score": 5,
+        "label": "complete"
       },
       {
         "text": "redux",
-        "score": 3
+        "score": 3,
+        "label": "solid"
       },
       {
         "text": "remix",
-        "score": 2
+        "score": 2,
+        "label": "explorative"
       },
       {
         "text": "unit testing",
-        "score": 4
+        "score": 4,
+        "label": "extensive"
       },
       {
         "text": "E2E testing",
-        "score": 3
+        "score": 3,
+        "label": "solid"
       },
       {
         "text": "angular",
-        "score": 3
+        "score": 3,
+        "label": "solid"
       },
       {
         "text": "docker",
-        "score": 2
+        "score": 2,
+        "label": "specific"
       },
       {
         "text": "AWS",
-        "score": 2
+        "score": 2,
+        "label": "specific"
       },
       {
         "text": "python",
-        "score": 3
+        "score": 3,
+        "label": "solid"
       },
       {
         "text": "golang",
-        "score": 3
+        "score": 3,
+        "label": "solid"
       }
     ],
     "education": [
@@ -158,11 +171,13 @@
     "languages": [
       {
         "language": "spanish",
-        "score": 5
+        "score": 5,
+        "label": "native"
       },
       {
         "language": "english",
-        "score": 4
+        "score": 4,
+        "label": "professional"
       }
     ],
     "interests": ["videogames", "sports", "3D modelling", "technology", "music"]

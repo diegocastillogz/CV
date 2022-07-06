@@ -38,7 +38,7 @@ function App() {
           <Languages languages={languages} />
           <Interests interests={interests} />
           <ThemeSwitch selectedTheme={theme} toggleTheme={toggleTheme} />
-          <DownloadCVButton />
+          <DownloadCVButton selectedTheme={theme} />
         </BodyContainer>
       </Layout>
     </ThemeProvider>

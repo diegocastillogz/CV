@@ -71,7 +71,12 @@ const StyledEducationLink = styled.a`
 
 const StyledDateAndLocation = styled.div`
   margin: 8px 0;
-  color: ${({ theme }) => theme.colors.subtitleFontColor};
+  p {
+    color: ${({ theme }) => theme.colors.subtitleFontColor};
+    &::before {
+      display: none;
+    }
+  }
 `;
 
 export default Education;

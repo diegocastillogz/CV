@@ -4,7 +4,7 @@ const Languages = ({ languages }) => (
   <StyledLanguagesSection>
     <h2>languages</h2>
     <StyledLanguagesList>
-      {languages?.map(({ language, score }, index) => (
+      {languages?.map(({ language, score, label }, index) => (
         <StyledProfiencyItem key={index}>
           <StyledProfiencyContainer>
             {[...Array.from({ length: score }, (_, i) => i * 10 + 10)]?.map(
@@ -13,7 +13,8 @@ const Languages = ({ languages }) => (
               )
             )}
           </StyledProfiencyContainer>
-          <p>{language}</p>
+          <StyledLanguageProfiency>{language}</StyledLanguageProfiency>
+          <StyledLabelProfiency>{label}</StyledLabelProfiency>
         </StyledProfiencyItem>
       ))}
     </StyledLanguagesList>
@@ -50,7 +51,9 @@ const StyledProfiencyItem = styled.li`
   justify-content: space-between;
   p {
     text-transform: capitalize;
-    margin-top: 8px;
+    &::before {
+      display: none;
+    }
   }
 `;
 
@@ -65,6 +68,16 @@ const StyledProfiencyScore = styled.div`
   height: ${({ scoreValue }) => `${scoreValue}px`};
   background-color: ${({ theme }) => theme.colors.subtitleFontColor};
   margin-top: auto;
+`;
+
+const StyledLanguageProfiency = styled.p`
+  margin-top: 8px;
+`;
+
+const StyledLabelProfiency = styled.p`
+  color: ${({ theme }) => theme.colors.subtitleFontColor};
+  font-weight: 600;
+  margin-top: 2px;
 `;
 
 export default Languages;
