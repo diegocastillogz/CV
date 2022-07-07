@@ -3,7 +3,7 @@
     "header": {
       "fullname": "Diego Castillo",
       "position": "Software Developer",
-      "description": "Developer with more than four years of experience in application development and design guided by agile methodologies specialized in process enhancement focusing on the client's necessities. Experience in product design, testing, building, release, and maintenance of different software products, such as finance, education, commerce, and automotive companies.",
+      "description": "Developer with more than four years of experience in application development and design guided by agile methodologies specialized in process enhancement focusing on the client's necessities. Wide experience in product design, testing, building, release, and maintenance of different software products, such as finance, education, commerce, and automotive companies.",
       "socialNetworks": [
         {
           "text": "diegorlando5@gmail.com",
@@ -22,11 +22,6 @@
           "href": "https://www.linkedin.com/in/diegocastillogz",
           "image": "linkedin",
           "alt": "linkedin profile"
-        },
-        {
-          "text": "Bogotá, Colombia",
-          "image": "location",
-          "alt": "location"
         }
       ]
     },
@@ -36,11 +31,10 @@
         "company": "universidad distrital francisco josé de caldas",
         "url": "https://www.udistrital.edu.co",
         "date": "Oct 18, 2016 - Nov 27, 2017",
-        "location": "Bogotá, Colombia",
         "description": [
-          "Develop web applications based on the university requirements to make easier processes for the personnel",
-          "working on the university teacher salary system that allows making payments in a more efficient way saving a lot of time",
-          "AngularJS, Javascript, Golang, CSS, and HTML."
+          "Organizing a comprehensible process documentation flow to understand how the stakeholders interact with the wage calculation was a manual process to define and plan the new platform to automate it.",
+          "In charge of develop a web app to calculate the teachers' salaries inside the university considering their studies, research, and other factors that influence the wage amount.",
+          "Executing the new process in the institution to automate the wage calculation with the new web app merging flow structures including document upload, and research and studies data update."
         ]
       },
       {
@@ -48,11 +42,10 @@
         "company": "omniLatam",
         "url": "https://omnilatam.com",
         "date": "Mar 1, 2018 - Feb 11, 2019",
-        "location": "Colombia - Chile",
         "description": [
-          "Developing web applications to manage a loan system to SMEs from Chile",
-          "Based on all the requirements with specifications to calculate  loans, interest, arrears, payments, and authentication system",
-          "AngularJS, React, Javascript, react-testing-library, CSS, and HTML."
+          "Maintaning the existing factoring web app that allows users load their invoices on the applicate and validate their informations, such as owner, date, amount and similiar",
+          "Building a new factoring web app for the company to handle the invoices transfers between buyers and sellers, also adding the functions to load and validate those invoices.",
+          "Implementing the requirements given by the company call center employees to help them to fast their daily tasks and help the clients know information regarding their invoices."
         ]
       },
       {
@@ -60,11 +53,10 @@
         "company": "resuelve tu deuda",
         "url": "https://resuelvetudeuda.com",
         "date": "Feb 13, 2019 - Jul 4, 2021",
-        "location": "Colombia - México",
         "description": [
-          "Developing web applications to manage a loan and investing system for people in Mexico, often, talking directly with people",
-          "also developing the web application that allows people to manage and consult their payments taking into consideration different",
-          "React, jest, enzyme, react-testing-library, Gatsby, E2E testing with Cypress, cypress-testing-library, SASS, SCSS"
+          "Managing P2P lending platform develop to verify the personal information of the probable clients, using their credit score information to allow them to request credits with the company.",
+          "Handling the government platform connections to verify the credit score of a person to set up an interest rate depending on this and other factors, like demographic and economic variables.",
+          "Responsible for building a platform to allow the customer service employees, managers, and clients transparency with all company credits information."
         ]
       },
       {
@@ -72,11 +64,10 @@
         "company": "mercadoLibre",
         "url": "https://www.mercadolibre.com",
         "date": "Sep 13, 2021 - Abr 22, 2021",
-        "location": "Colombia - Argentina",
         "description": [
-          "Developing web applications to manage a loan and investing system for people in Mexico, often, talking directly with people",
-          "developing the web application that allows people to manage and consult their payments taking into consideration different",
-          "React, jest, enzyme, react-testing-library, Gatsby, E2E testing with Cypress"
+          "In charge of developing the message feature on the company fraud web app to allow clients and employees to chat to each other to know the reclaims state, including the bank automatic response system as well.",
+          "Migrating the existing web app to a new one with the required standards of the company implementing E2E testing and improving the release flow demanding unit testing coverage on the frontend code.",
+          "Planning with the technical and the operative teams the new features to develop on the company fraud application, including a new process to validate the rejected payments from the bank."
         ]
       },
       {
@@ -84,11 +75,10 @@
         "company": "encora (AndGo Goodyear)",
         "url": "https://www.encora.com/",
         "date": "Abr 28, 2021 - current work",
-        "location": "Colombia - United States",
         "description": [
-          "their main product is a platform to help companies to certify on different standards like GDPR or ISO certifications",
-          "developing the platform that allows auditors to manage all the associated companies information, involving on all the flow of",
-          "React, jest, enzyme, react-testing-library, Gatsby, E2E testing with Cypress"
+          "Maintaining the existing web app to handle the vehicle tech support with appointments and mechanics assignments to specific services for clients.",
+          "Implementing new steps on the service appointments flow that allows coordinators to manage technicians on the Goodyear mechanical workshops.",
+          "Creating a new feature to create periodic appointments to specific vehicle problems like engine-specific problems that should be checked every month."
         ]
       }
     ],
@@ -124,12 +114,12 @@
         "label": "explorative"
       },
       {
-        "text": "unit testing",
+        "text": "unit testing (testing-library)",
         "score": 4,
         "label": "extensive"
       },
       {
-        "text": "E2E testing",
+        "text": "E2E testing (Cypress)",
         "score": 3,
         "label": "solid"
       },
@@ -157,15 +147,23 @@
         "text": "golang",
         "score": 3,
         "label": "solid"
+      },
+      {
+        "text": "postgreSQL",
+        "score": 3,
+        "label": "solid"
+      },
+      {
+        "text": "mongo",
+        "score": 3,
+        "label": "solid"
       }
     ],
     "education": [
       {
         "title": "Systems Engineer",
         "institute": "Universidad Distrital Francisco José de Caldas",
-        "href": "https://www.udistrital.edu.co",
-        "date": "Jun, 2010 - Oct, 2016",
-        "location": "Bogotá, Colombia"
+        "date": "Jun, 2010 - Oct, 2016"
       }
     ],
     "languages": [

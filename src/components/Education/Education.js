@@ -1,31 +1,14 @@
-import { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
-
-import { LinkIcon } from "assets/icons";
+import styled from "styled-components";
 
 const Education = ({ education }) => {
-  const { colors } = useContext(ThemeContext);
-
   return (
     <StyledEducationSection>
       <h2>Education</h2>
       <StyledEducationList>
-        {education?.map(({ href, institute, date, location, title }, index) => (
+        {education?.map(({ institute, title }, index) => (
           <li key={index}>
             <h3>{title}</h3>
-            <StyledEducationLink
-              key={index}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <h3>{institute}</h3>
-              <LinkIcon color={colors.subtitleFontColor} />
-            </StyledEducationLink>
-            <StyledDateAndLocation>
-              <p>{date}</p>
-              <p>{location}</p>
-            </StyledDateAndLocation>
+            <StyledInstitutionName>{institute}</StyledInstitutionName>
           </li>
         ))}
       </StyledEducationList>
@@ -54,29 +37,9 @@ const StyledEducationList = styled.ul`
   list-style: none;
 `;
 
-const StyledEducationLink = styled.a`
-  display: flex;
-  align-items: center;
-  margin-top: 8px;
-
-  h3 {
-    font-weight: 500;
-  }
-
-  img {
-    width: 25px;
-    heigth: 25px;
-  }
-`;
-
-const StyledDateAndLocation = styled.div`
-  margin: 8px 0;
-  p {
-    color: ${({ theme }) => theme.colors.subtitleFontColor};
-    &::before {
-      display: none;
-    }
-  }
+const StyledInstitutionName = styled.h3`
+  font-weight: 400;
+  margin-top: 5px;
 `;
 
 export default Education;

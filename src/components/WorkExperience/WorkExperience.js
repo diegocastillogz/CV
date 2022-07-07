@@ -1,35 +1,25 @@
-import { useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
-
-import { LinkIcon } from "assets/icons";
+import styled from "styled-components";
 
 const WorkExperience = ({ experience }) => {
-  const { colors } = useContext(ThemeContext);
   return (
     <StyledWorkExperienceSection>
       <h2>work experience</h2>
-      {experience?.map(
-        ({ position, company, url, date, location, description }, index) => (
-          <StyledExperienceItem key={index}>
-            <h3>{position}</h3>
-            <StyledLink href={url} target="_blank" rel="noopener noreferrer">
-              <h3>{company}</h3>
-              <LinkIcon color={colors.subtitleFontColor} />
-            </StyledLink>
-            <StyledDateAndLocation>
-              <p>{date}</p>
-              <p>{location}</p>
-            </StyledDateAndLocation>
-            <StyledResponsibilityList>
-              {description?.map((itemText, index) => (
-                <StyledResponsibilityItem key={index}>
-                  <p>{itemText}</p>
-                </StyledResponsibilityItem>
-              ))}
-            </StyledResponsibilityList>
-          </StyledExperienceItem>
-        )
-      )}
+      {experience?.map(({ position, company, date, description }, index) => (
+        <StyledExperienceItem key={index}>
+          <h3>{position}</h3>
+          <StyleCompanyName>{company}</StyleCompanyName>
+          <StyledDate>
+            <p>{date}</p>
+          </StyledDate>
+          <StyledResponsibilityList>
+            {description?.map((itemText, index) => (
+              <StyledResponsibilityItem key={index}>
+                <p>{itemText}</p>
+              </StyledResponsibilityItem>
+            ))}
+          </StyledResponsibilityList>
+        </StyledExperienceItem>
+      ))}
     </StyledWorkExperienceSection>
   );
 };
@@ -66,7 +56,7 @@ const StyledExperienceItem = styled.section`
   }
 `;
 
-const StyledDateAndLocation = styled.div`
+const StyledDate = styled.div`
   margin: 8px 0;
   p {
     color: ${({ theme }) => theme.colors.subtitleFontColor};
@@ -80,29 +70,12 @@ const StyledResponsibilityList = styled.ul`
 const StyledResponsibilityItem = styled.li`
   text-align: justify;
   margin-top: 8px;
-
-  &:last-child {
-    list-style: none;
-    p {
-      color: ${({ theme }) => theme.colors.subtitleFontColor};
-      font-weight: 600;
-    }
-  }
 `;
 
-const StyledLink = styled.a`
-  display: flex;
-  align-items: center;
-
-  h3 {
-    font-weight: 500;
-    text-transform: capitalize;
-    margin-right: 5px;
-  }
-  img {
-    width: 25px;
-    heigth: 25px;
-  }
+const StyleCompanyName = styled.a`
+  font-weight 300;
+  text-transform: capitalize;
+  color: ${({ theme }) => theme.colors.subtitleFontColor};
 `;
 
 export default WorkExperience;

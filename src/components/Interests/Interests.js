@@ -38,6 +38,9 @@ const StyledInterestsList = styled.ul`
 
   li {
     margin-bottom: 15px;
+    p {
+      text-transform: capitalize;
+    }
   }
 `;
 

@@ -1,13 +1,7 @@
 import { useCallback, useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
 
-import profileImage from "assets/profile.jpg";
-import {
-  EmailIcon,
-  GithubIcon,
-  LinkedinIcon,
-  LocationIcon,
-} from "assets/icons";
+import { EmailIcon, GithubIcon, LinkedinIcon } from "assets/icons";
 
 const Header = ({ header }) => {
   const { colors } = useContext(ThemeContext);
@@ -32,35 +26,18 @@ const Header = ({ header }) => {
     <StyledHeader>
       <StyledPrimaryInfoContainer>
         <h1>{header.fullname}</h1>
-        <StyledProfileImage
-          className="profile-image"
-          src={profileImage}
-          alt="profile"
-        />
         <StyledSubtitle>{header.position}</StyledSubtitle>
         <StyledDescription>{header.description}</StyledDescription>
       </StyledPrimaryInfoContainer>
       <StyledLSocialNetworkist>
-        {header.socialNetworks?.map(({ href, image, text }, index) => {
-          if (href) {
-            return (
-              <StyledSocialNetworksItem key={index}>
-                <a href={href} target="_blank" rel="noopener noreferrer">
-                  {getImageIcon(image)}
-                  <p>{text}</p>
-                </a>
-              </StyledSocialNetworksItem>
-            );
-          }
-          return (
-            <StyledSocialNetworksItem key={index}>
-              <div>
-                <LocationIcon color={colors.textFontColor} />
-                <p>{text}</p>
-              </div>
-            </StyledSocialNetworksItem>
-          );
-        })}
+        {header.socialNetworks?.map(({ href, image, text }, index) => (
+          <StyledSocialNetworksItem key={index}>
+            <a href={href} target="_blank" rel="noopener noreferrer">
+              {getImageIcon(image)}
+              <p>{text}</p>
+            </a>
+          </StyledSocialNetworksItem>
+        ))}
       </StyledLSocialNetworkist>
     </StyledHeader>
   );
@@ -77,40 +54,14 @@ const StyledPrimaryInfoContainer = styled.div`
   align-items: center;
   padding: ${({ theme }) => `15px ${theme.paddings.XSHorizontalPadding} 0`};
 
-  h1 {
-    grid-area: title;
-  }
-
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
-    display: grid;
-    grid-template-areas:
-      "title profileImage"
-      "subtitle profileImage"
-      "description profileImage";
+    align-items: flex-start;
     padding: ${({ theme }) =>
       `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDVerticalPadding} ${theme.paddings.XSVerticalPadding}`};
   }
 `;
 
-const StyledProfileImage = styled.img`
-  grid-area: profileImage;
-  width: 120px;
-  height: 120px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 50%;
-  border-bottom-right-radius: 20px;
-  border: 5px solid ${({ theme }) => theme.colors.subtitleFontColor};
-  margin: 10px 0;
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
-    margin: ${({ theme }) => `${theme.paddings.XXSVerticalPadding} 0`};
-    width: 150px;
-    height: 150px;
-  }
-`;
-
 const StyledSubtitle = styled.h2`
-  grid-area: subtitle;
   color: ${({ theme }) => theme.colors.subtitleFontColor};
   margin-bottom: 15px;
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
@@ -119,7 +70,6 @@ const StyledSubtitle = styled.h2`
 `;
 
 const StyledDescription = styled.p`
-  grid-area: description;
   font-size: ${({ theme }) => theme.paragraphSize};
   line-height: 25px;
   margin-bottom: 10px;

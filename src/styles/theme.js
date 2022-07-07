@@ -10,11 +10,11 @@ const breakpoints = {
 
 const fonts = {
   small: {
-    title: "20px",
-    subtitle: "14px",
+    title: "23px",
+    subtitle: "19px",
     sectionParagraph: "12px",
-    sectionTitle: "14px",
-    headerParagraph: "11px",
+    sectionTitle: "15px",
+    headerParagraph: "13px",
     label: "11px",
   },
   big: {

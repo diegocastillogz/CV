@@ -10,7 +10,7 @@ const Skills = ({ skills }) => {
           const unfilledDots = 5 - filledDots;
           return (
             <StyledItemSkillContainer key={index}>
-              <p>{text}</p>
+              <StyledSkillName>{text}</StyledSkillName>
               <StyledScore>
                 <StyledScoreLabel>{label}</StyledScoreLabel>
                 <StyledDotsContainer>
@@ -74,12 +74,24 @@ const StyledItemSkillContainer = styled.li`
 
 const StyledDotsContainer = styled.div`
   display: flex;
-  width: 80%;
+  width: 60%;
   justify-content: space-between;
   margin-top: 5px;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
-    width: 50%;
+    width: 75%
+    margin: auto 0;
+  }
+`;
+
+const StyledScoreLabel = styled.p`
+  color: ${({ theme }) => theme.colors.subtitleFontColor};
+  font-weight: 500;
+  font-size: ${({ theme }) => theme.fonts.small.label};
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    font-size: ${({ theme }) => theme.fonts.big.label};
+    width: 25%;
     margin: auto 0;
   }
 `;
@@ -109,21 +121,15 @@ const StyledScore = styled.div`
   width: 100%;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
-    width: 80%;
-    justify-content: flex-end;
+    width: 45%;
+    justify-content: space-between;
     flex-direction: row;
   }
 `;
 
-const StyledScoreLabel = styled.p`
-  color: ${({ theme }) => theme.colors.subtitleFontColor};
-  font-weight: 500;
-  font-size: ${({ theme }) => theme.fonts.small.label};
-
+const StyledSkillName = styled.p`
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
-    font-size: ${({ theme }) => theme.fonts.big.label};
-    width: 20%;
-    margin: auto 0;
+    width: 40%;
   }
 `;
 
