@@ -99,6 +99,11 @@
         "label": "extensive"
       },
       {
+        "text": "typescript",
+        "score": 4,
+        "label": "extensive"
+      },
+      {
         "text": "react",
         "score": 5,
         "label": "complete"
@@ -125,6 +130,12 @@
       },
       {
         "text": "angular",
+        "score": 3,
+        "label": "solid"
+      },
+
+      {
+        "text": "graphql",
         "score": 3,
         "label": "solid"
       },
@@ -175,7 +186,7 @@
       {
         "language": "english",
         "score": 4,
-        "label": "professional"
+        "label": "fluent"
       }
     ],
     "interests": ["videogames", "sports", "3D modelling", "technology", "music"]
