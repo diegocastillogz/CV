@@ -1,20 +1,18 @@
 import styled from "styled-components";
 
 const BodyContainer = styled.div`
-  width: 100%;
-  padding-bottom: ${({ theme }) => `${theme.paddings.MDVerticalPadding}`};
+  padding: ${({ theme }) =>
+    `${theme.paddings.XSVerticalPadding} ${theme.paddings.MDHorizontalPadding}`};
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     display: grid;
     grid-template-areas:
-      "experience skills"
-      "experience education"
-      "experience languages"
-      "experience projects"
-      "experience interests";
-    grid-template-columns:
-      calc(50% - ${({ theme }) => theme.paddings.MDHorizontalPadding} - 25px)
-      calc(50% - ${({ theme }) => theme.paddings.MDHorizontalPadding} - 25px);
+      "skills education"
+      "skills languages"
+      "experience experience"
+      "projects projects";
+    grid-template-columns: calc(50% - 25px) calc(50% - 25px);
+    grid-row-gap: 5px;
     grid-column-gap: 50px;
     padding-bottom: 0px;
   }

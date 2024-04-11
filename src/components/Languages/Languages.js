@@ -6,14 +6,12 @@ const Languages = ({ languages }) => (
     <StyledLanguagesList>
       {languages?.map(({ language, score, label }, index) => (
         <StyledProfiencyItem key={index}>
-          <StyledProfiencyContainer>
-            {[...Array.from({ length: score }, (_, i) => i * 10 + 10)]?.map(
-              (value, index) => (
-                <StyledProfiencyScore scoreValue={value} key={index} />
-              )
-            )}
-          </StyledProfiencyContainer>
-          <StyledLanguageProfiency>{language}</StyledLanguageProfiency>
+          {[...Array.from({ length: score }, (_, i) => i * 10 + 10)]?.map(
+            (value, index) => (
+              <StyledProfiencyScore scoreValue={value} key={index} />
+            )
+          )}
+          <p>{language}</p>
           <StyledLabelProfiency>{label}</StyledLabelProfiency>
         </StyledProfiencyItem>
       ))}
@@ -22,8 +20,6 @@ const Languages = ({ languages }) => (
 );
 
 const StyledLanguagesSection = styled.section`
-  padding: ${({ theme }) =>
-    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
   grid-area: languages;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
@@ -32,33 +28,28 @@ const StyledLanguagesSection = styled.section`
   }
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
-    padding: ${({ theme }) =>
-      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDHorizontalPadding} 0`};
     width: 100%;
   }
 `;
 
 const StyledLanguagesList = styled.ul`
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 40px;
+  flex-direction: column;
 `;
 
 const StyledProfiencyItem = styled.li`
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  align-items: baseline;
+  justify-content: left;
+
   p {
+    font-size: ${({ theme }) => theme.fonts.big.sectionParagraph};
     text-transform: capitalize;
+    width: 60px;
     &::before {
       display: none;
     }
   }
-`;
-
-const StyledProfiencyContainer = styled.div`
-  display: flex;
 `;
 
 const StyledProfiencyScore = styled.div`
@@ -69,13 +60,8 @@ const StyledProfiencyScore = styled.div`
   margin-top: auto;
 `;
 
-const StyledLanguageProfiency = styled.p`
-  margin-top: 8px;
-`;
-
 const StyledLabelProfiency = styled.p`
   color: ${({ theme }) => theme.colors.subtitleFontColor};
-  font-weight: 600;
   margin-top: 2px;
 `;
 

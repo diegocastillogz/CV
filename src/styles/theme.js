@@ -64,8 +64,10 @@ export const darkColors = {
 const paddings = {
   XXSVerticalPadding: "8px",
 
-  XSHorizontalPadding: "28px",
-  XSVerticalPadding: "20px",
+  XSVerticalPadding: "12px",
+
+  SHorizontalPadding: "28px",
+  SVerticalPadding: "20px",
 
   MDHorizontalPadding: "40px",
   MDVerticalPadding: "30px",
@@ -79,17 +81,17 @@ const COMMON_STYLES = {
 };
 
 export const lightTheme = {
-  paddings,
-  fonts,
   breakpoints,
   colors: lightColors,
+  fonts,
+  paddings,
   ...COMMON_STYLES,
 };
 
 export const darkTheme = {
-  paddings,
-  fonts,
   breakpoints,
   colors: darkColors,
+  fonts,
+  paddings,
   ...COMMON_STYLES,
 };

@@ -3,23 +3,23 @@
     "header": {
       "fullname": "Diego Castillo",
       "position": "Software Developer",
-      "description": "5+ years of experience as a developer specializing in agile methodologies and process enhancement. Proficient in application development and design, product design, testing, building, release, and maintenance for finance, education, commerce, and automotive industries. Skilled in delivering high-quality code for complex projects, with strong analytical and problem-solving skills. A team player with excellent communication skills, committed to delivering outstanding results in a timely and efficient manner.",
+      "description": "5+ years of experience as a developer specializing in agile methodologies and process enhancement. Proficient in application development and design,product design,testing,building,release,and maintenance for finance,education,commerce,and automotive industries. Skilled in delivering high-quality code for complex projects.",
       "socialNetworks": [
         {
-          "text": "procastlegz@gmail.com",
-          "href": "mailto:procastlegz@gmail.com",
+          "text": "diegocastillogz25@gmail.com",
+          "href": "mailto:diegocastillogz25@gmail.com",
           "image": "email",
           "alt": "email address"
         },
         {
-          "text": "Github",
+          "text": "github.com/diegocastillogz",
           "href": "https://github.com/diegocastillogz",
           "image": "github",
           "alt": "github profile"
         },
         {
-          "text": "Linkedin",
-          "href": "https://www.linkedin.com/in/diegocastillogz/",
+          "text": "linkedin.com/in/diegocastillogz",
+          "href": "https://linkedin.com/in/diegocastillogz",
           "image": "linkedin",
           "alt": "linkedin profile"
         }
@@ -30,11 +30,10 @@
         "position": "fullstack developer",
         "company": "universidad distrital francisco josé de caldas",
         "url": "https://www.udistrital.edu.co",
-        "date": "Oct 18, 2016 - Nov 27, 2017",
+        "date": "Oct 18,2016 - Nov 27, 2017",
         "description": [
           "Designed and implemented a new web-based platform to automate the wage calculation process for teachers at a university, considering their qualifications, research, and other factors.",
-          "Created a streamlined process documentation flow to understand stakeholder interactions with the wage calculation process.",
-          "Executed the implementation of the new web app, which included merging flow structures and updating research and study data."
+          "Created a streamlined process documentation flow to understand stakeholder interactions with the wage calculation process."
         ]
       },
       {
@@ -44,8 +43,7 @@
         "date": "Mar 1, 2018 - Feb 11, 2019",
         "description": [
           "Maintained an existing factoring web app, which allowed users to load their invoices and validate their information such as owner, date, and amount.",
-          "Built a new factoring web app for the company to handle invoice transfers between buyers and sellers, as well as added functions for loading and validating invoices.",
-          "Implemented requirements provided by the company's call center employees to improve their daily tasks and provide clients with information about their invoices."
+          "Built a new factoring web app for the company to handle invoice transfers between buyers and sellers, as well as added functions for loading and validating invoices."
         ]
       },
       {
@@ -55,8 +53,7 @@
         "date": "Feb 13, 2019 - Jul 4, 2021",
         "description": [
           "Managed the development of a P2P lending platform that verified the personal information and credit scores of potential clients, enabling them to request credits from the company.",
-          "Facilitated connections to the government platform to verify a person's credit score, allowing for an interest rate to be set based on various factors such as demographic and economic variables.",
-          "Built a platform to improve the transparency of company credit information for customer service employees, managers, and clients."
+          "Facilitated connections to the government platform to verify a person's credit score, allowing for an interest rate to be set based on various factors such as demographic and economic variables."
         ]
       },
       {
@@ -66,100 +63,46 @@
         "date": "Sep 13, 2021 - Abr 22, 2022",
         "description": [
           "Developed a messaging feature for the company's fraud web app that allows clients and employees to chat with each other and track the status of claims, including integration with the bank's automatic response system.",
-          "Migrated an existing web app to a new platform with improved standards and implemented end-to-end testing, improved release flow, and increased unit testing coverage on frontend code.",
-          "Collaborated with technical and operational teams to plan and develop new features for the company's fraud application, including a new process for validating rejected payments from the bank."
+          "Migrated an existing web app to a new platform with improved standards and implemented end-to-end testing, improved release flow, and increased unit testing coverage on frontend code."
         ]
       },
       {
-        "position": "frontend developer",
+        "position": "fullstack developer",
         "company": "encora (AndGo Goodyear)",
         "url": "https://www.encora.com/",
         "date": "Abr 28, 2022 - current work",
         "description": [
           "Maintained an existing web app that facilitated vehicle tech support, including appointments and mechanics assignments for clients.",
-          "Implemented new steps in the service appointment flow, enabling coordinators to manage technicians at Goodyear mechanical workshops.",
-          "Created a new feature that enabled periodic appointments to be scheduled for specific vehicle problems, such as engine-specific issues that require monthly checks."
+          "Implemented new steps in the service appointment flow, enabling coordinators to manage technicians at Goodyear mechanical workshops."
         ]
       }
     ],
     "skills": [
       {
-        "text": "HTML",
-        "label": "complete"
+        "text": "complete",
+        "experience": "4+ years of experience",
+        "list": "HTML, CSS, Javascript, React"
       },
       {
-        "text": "CSS",
-        "label": "complete"
+        "text": "extensive",
+        "experience": "3+ years of experience",
+        "list": "Typescript, Unit Testing, Graphql, E2E Testing (Cypress)"
       },
       {
-        "text": "javascript",
-        "label": "complete"
+        "text": "solid",
+        "experience": "2+ years of experience",
+        "list": "Django, Python, Redux, Angular, Redux Toolkit, Golang"
       },
       {
-        "text": "typescript",
-        "score": 4,
-        "label": "extensive"
-      },
-      {
-        "text": "react",
-        "label": "complete"
-      },
-      {
-        "text": "redux",
-        "label": "solid"
-      },
-      {
-        "text": "Redux toolkit",
-        "label": "explorative"
-      },
-      {
-        "text": "remix",
-        "label": "explorative"
-      },
-      {
-        "text": "unit testing",
-        "label": "extensive"
-      },
-      {
-        "text": "graphql",
-        "label": "extensive"
-      },
-      {
-        "text": "E2E testing",
-        "label": "solid"
-      },
-      {
-        "text": "angular",
-        "label": "solid"
-      },
-
-      {
-        "text": "graphql",
-        "score": 3,
-        "label": "solid"
-      },
-      {
-        "text": "docker",
-        "label": "specific"
-      },
-      {
-        "text": "AWS",
-        "label": "specific"
-      },
-      {
-        "text": "python",
-        "label": "solid"
-      },
-      {
-        "text": "golang",
-        "label": "explorative"
+        "text": "explorative",
+        "experience": "1+ years of experience",
+        "list": "Remix, NextJS, AWS S3, AWS EC2"
       }
     ],
     "education": [
       {
-        "title": "Systems Engineer",
-        "institute": "Universidad Distrital Francisco José de Caldas",
-        "date": "Jun, 2010 - Oct, 2016"
+        "title": "Bachelor's Degree in Systems Engineering (2017)",
+        "institute": "Universidad Distrital Francisco José de Caldas"
       }
     ],
     "languages": [

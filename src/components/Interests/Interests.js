@@ -17,7 +17,7 @@ const Interests = ({ interests }) => {
 
 const StyledInterestsSection = styled.section`
   padding: ${({ theme }) =>
-    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
+    `${theme.paddings.MDVerticalPadding} ${theme.paddings.SHorizontalPadding} 0`};
   grid-area: interests;
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
@@ -34,7 +34,7 @@ const StyledInterestsSection = styled.section`
 `;
 
 const StyledInterestsList = styled.ul`
-  padding: ${({ theme }) => `0 ${theme.paddings.XSHorizontalPadding}`};
+  padding: ${({ theme }) => `0 ${theme.paddings.SHorizontalPadding}`};
 
   li {
     margin-bottom: 15px;

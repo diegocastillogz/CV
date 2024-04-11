@@ -1,6 +1,5 @@
-import { useContext, useEffect, useState } from "react";
-import styled, { ThemeContext } from "styled-components";
-import { LinkIcon, GithubIcon } from "assets/icons";
+import { useEffect, useState } from "react";
+import styled from "styled-components";
 
 const Projects = () => {
   const [repos, setRepos] = useState([]);
@@ -25,43 +24,29 @@ const Projects = () => {
     getReposData();
   }, []);
 
-  const { colors } = useContext(ThemeContext);
-
   return (
     <StyledProjectSection>
       <h2>Projects</h2>
-      <ul>
+      <StyledProjectsList>
         {repos
           ?.filter(({ name }) => name !== "CV")
-          ?.map(
-            ({
-              name,
-              id,
-              description,
-              clone_url,
-              topics,
-              language,
-              homepage,
-            }) => (
-              <StyledItemProjectsContainer key={id}>
-                <ProjectSubtitle>
-                  <h3>{name}</h3>
-                  <a target="_blank" href={homepage} rel="noreferrer">
-                    <LinkIcon color={colors.subtitleFontColor} />
-                  </a>
-                  <a target="_blank" href={clone_url} rel="noreferrer">
-                    <GithubIcon color={colors.subtitleFontColor} />
-                  </a>
-                </ProjectSubtitle>
-                <ProjectParagraph hasTitleColor>{description}</ProjectParagraph>
-                <ProjectParagraph>
-                  <span>Made on {language}</span>
-                </ProjectParagraph>
-                <ProjectParagraph>{topics?.join(", ")}</ProjectParagraph>
-              </StyledItemProjectsContainer>
-            )
-          )}
-      </ul>
+          ?.map(({ name, id, description, clone_url, topics, language }) => (
+            <StyledItemProjectsContainer key={id}>
+              <ProjectSubtitle>
+                {name}
+                <a target="_blank" href={clone_url} rel="noreferrer">
+                  <ProjectParagraph hasTitleColor>
+                    {description}
+                  </ProjectParagraph>
+                </a>
+              </ProjectSubtitle>
+              <ProjectParagraph>
+                <span>Made on {language}</span>
+              </ProjectParagraph>
+              <ProjectParagraph>{topics?.join(", ")}</ProjectParagraph>
+            </StyledItemProjectsContainer>
+          ))}
+      </StyledProjectsList>
     </StyledProjectSection>
   );
 };
@@ -69,12 +54,10 @@ const Projects = () => {
 const ProjectSubtitle = styled.h3`
   font-size: ${({ theme }) => theme.fonts.small.sectionTitle};
   display: flex;
-  margin: 30px 0 5px;
-  h3 {
-    color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
-    font-weight: 300;
-    margin-right: 7px;
-  }
+  flex-direction: column;
+  color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
+  font-weight: 300;
+  margin-right: 7px;
   a {
     color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
   }
@@ -86,8 +69,6 @@ const ProjectSubtitle = styled.h3`
 
 const StyledProjectSection = styled.section`
   grid-area: projects;
-  padding: ${({ theme }) =>
-    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
     width: ${({ theme }) => `${theme.maxWidthScreenMobile}`};
@@ -96,8 +77,6 @@ const StyledProjectSection = styled.section`
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     width: 100%;
-    padding: ${({ theme }) =>
-      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDHorizontalPadding} 0`};
   }
 `;
 
@@ -114,8 +93,14 @@ const ProjectParagraph = styled.p`
   }
 `;
 
+const StyledProjectsList = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+`;
+
 const StyledItemProjectsContainer = styled.li`
-  margin-bottom: 14px;
+  width: calc(50% - 30px);
   p {
     &:before {
       display: none;

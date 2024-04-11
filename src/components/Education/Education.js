@@ -6,10 +6,10 @@ const Education = ({ education }) => {
       <h2>Education</h2>
       <StyledEducationList>
         {education?.map(({ institute, title }, index) => (
-          <li key={index}>
-            <h3>{title}</h3>
+          <StyledEducationItem key={index}>
+            <p>{title}</p>
             <StyledInstitutionName>{institute}</StyledInstitutionName>
-          </li>
+          </StyledEducationItem>
         ))}
       </StyledEducationList>
     </StyledEducationSection>
@@ -17,28 +17,32 @@ const Education = ({ education }) => {
 };
 
 const StyledEducationSection = styled.section`
-  padding: ${({ theme }) =>
-    `${theme.paddings.MDVerticalPadding} ${theme.paddings.XSHorizontalPadding} 0`};
   grid-area: education;
-
+  max-width: 100%;
   @media (min-width: ${({ theme }) => `${theme.breakpoints.mobileL}`}) {
     width: ${({ theme }) => `${theme.maxWidthScreenMobile}`};
     margin: 0 auto;
   }
-
-  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
-    padding: ${({ theme }) =>
-      `${theme.paddings.MDVerticalPadding} ${theme.paddings.MDHorizontalPadding} 0`};
-    width: 100%;
-  }
 `;
 
 const StyledEducationList = styled.ul`
-  list-style: none;
+  p {
+    &:before {
+      display: none;
+    }
+  }
 `;
 
-const StyledInstitutionName = styled.h3`
-  font-weight: 400;
+const StyledEducationItem = styled.li`
+  p {
+    font-size: ${({ theme }) => theme.fonts.big.sectionParagraph};
+    &:nth-child(2) {
+      color: ${({ theme }) => theme.colors.subtitleFontColor};
+    }
+  }
+`;
+
+const StyledInstitutionName = styled.p`
   margin-top: 5px;
 `;
 

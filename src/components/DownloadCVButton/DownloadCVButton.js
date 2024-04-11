@@ -1,24 +1,41 @@
-import { useContext } from "react";
+import { useState, useEffect, useContext } from "react";
 import styled, { ThemeContext } from "styled-components";
-import html2pdf from "html2pdf.js";
-
+import { jsPDF } from "jspdf";
 import { DownloadIcon } from "assets/icons";
 
 const DownloadCVButton = () => {
-  const { colors } = useContext(ThemeContext);
-  const pdfFile = document.querySelector("main");
+  const doc = new jsPDF({
+    orientation: "p",
+    unit: "pt",
+    format: "a4",
+    hotfixes: ["px_scaling"],
+    compressPdf: true,
+  });
 
-  let pdfOptions = {
-    filename: "DiegoCastilloCV.pdf",
-    image: { type: "png", quality: 1 },
-    pagebreak: { mode: "avoid-all" },
-    html2canvas: { scale: 2 },
-    jsPDF: { format: [245, 640], orientation: "portrait" },
-  };
+  const [contentHTML, setContentHTML] = useState(null);
+
+  const { colors } = useContext(ThemeContext);
+
+  useEffect(() => {
+    const element = document.querySelector("main");
+    if (element) {
+      setContentHTML(element);
+    }
+  }, []);
 
   return (
     <StyledDownloadCVButton
-      onClick={() => html2pdf().set(pdfOptions).from(pdfFile).save()}
+      onClick={async () => {
+        await doc.html(contentHTML, {
+          callback: (doc) => {
+            doc.save("DiegoCastilloCV.pdf");
+          },
+          margin: [0, 0],
+          html2canvas: {
+            scale: 0.59,
+          },
+        });
+      }}
     >
       <DownloadIcon color={colors.subtitleFontColor} />
     </StyledDownloadCVButton>

@@ -11,7 +11,6 @@ import CVData from "mocks/mock.json";
 import Skills from "components/Skills/Skills";
 import Education from "components/Education/Education";
 import Languages from "components/Languages/Languages";
-import Interests from "components/Interests/Interests";
 import Layout from "components/Layout/Layout";
 import Projects from "components/Projects/Projects";
 import ThemeSwitch from "components/ThemeSwitch/ThemeSwitch";
@@ -19,7 +18,7 @@ import DownloadCVButton from "components/DownloadCVButton/DownloadCVButton";
 
 function App() {
   const {
-    data: { header, experience, skills, education, languages, interests },
+    data: { header, experience, skills, education, languages },
   } = CVData;
 
   const [theme, setTheme] = useState("light");
@@ -38,7 +37,6 @@ function App() {
           <Education education={education} />
           <Languages languages={languages} />
           <Projects />
-          <Interests interests={interests} />
           <ThemeSwitch selectedTheme={theme} toggleTheme={toggleTheme} />
         </BodyContainer>
       </Layout>
