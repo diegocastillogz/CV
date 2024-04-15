@@ -70,7 +70,10 @@ const StyledDownloadCVButton = styled.button`
   border-radius: 50%;
   border: 3px solid ${({ theme }) => theme.colors.subtitleFontColor};
   background: ${({ theme }) => theme.colors.white};
-
+  display: none;
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    display: block;
+  }
   img {
     position: absolute;
     top: 3px;
