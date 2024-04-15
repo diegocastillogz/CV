@@ -14,7 +14,7 @@ const BodyContainer = styled.div`
     grid-template-columns: calc(50% - 25px) calc(50% - 25px);
     grid-row-gap: ${({ theme }) => `${theme.paddings.XSVerticalPadding}`};
     grid-column-gap: 50px;
-    padding-bottom: 30px;
+    padding-bottom: 5px;
   }
 
   h2 {
