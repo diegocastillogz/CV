@@ -1,9 +1,16 @@
-import { useState, useEffect, useContext } from "react";
-import styled, { ThemeContext } from "styled-components";
+import { useState, useEffect } from "react";
+import styled from "styled-components";
 import { jsPDF } from "jspdf";
-import { DownloadIcon } from "assets/icons";
+import downloadLightIcon from "assets/icons/download-light.png";
+import downloadDarkIcon from "assets/icons/download-dark.png";
 
-const DownloadCVButton = () => {
+const DownloadCVButton = ({ selectedTheme, header }) => {
+  const { socialNetworks } = header;
+
+  const icons = {
+    light: downloadLightIcon,
+    dark: downloadDarkIcon,
+  };
   const doc = new jsPDF({
     orientation: "p",
     unit: "pt",
@@ -13,8 +20,6 @@ const DownloadCVButton = () => {
   });
 
   const [contentHTML, setContentHTML] = useState(null);
-
-  const { colors } = useContext(ThemeContext);
 
   useEffect(() => {
     const element = document.querySelector("main");
@@ -26,6 +31,10 @@ const DownloadCVButton = () => {
   return (
     <StyledDownloadCVButton
       onClick={async () => {
+        await doc.link(40, 110, 150, 20, { url: socialNetworks[0].href });
+        await doc.link(240, 110, 150, 20, { url: socialNetworks[1].href });
+        await doc.link(420, 110, 150, 20, { url: socialNetworks[2].href });
+
         await doc.html(contentHTML, {
           callback: (doc) => {
             doc.save("DiegoCastilloCV.pdf");
@@ -37,14 +46,14 @@ const DownloadCVButton = () => {
         });
       }}
     >
-      <DownloadIcon color={colors.subtitleFontColor} />
+      <img src={icons[selectedTheme]} />
     </StyledDownloadCVButton>
   );
 };
 
 const StyledDownloadCVButton = styled.button`
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
   position: fixed;
   left: 5px;
   top: 50px;
@@ -53,10 +62,11 @@ const StyledDownloadCVButton = styled.button`
   border: 3px solid ${({ theme }) => theme.colors.subtitleFontColor};
   background: ${({ theme }) => theme.colors.white};
 
-  svg {
+  img {
     position: absolute;
     top: 3px;
-    right: 2px;
+    right: 3.2px;
+    width: 22px;
   }
 `;
 

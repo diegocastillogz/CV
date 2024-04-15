@@ -22,6 +22,7 @@ function App() {
   } = CVData;
 
   const [theme, setTheme] = useState("light");
+
   const toggleTheme = () => {
     theme === "light" ? setTheme("dark") : setTheme("light");
   };
@@ -30,7 +31,7 @@ function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyles />
       <Layout>
-        <Header header={header} />
+        <Header header={header} selectedTheme={theme} />
         <BodyContainer>
           <WorkExperience experience={experience} />
           <Skills skills={skills} />
@@ -40,7 +41,7 @@ function App() {
           <ThemeSwitch selectedTheme={theme} toggleTheme={toggleTheme} />
         </BodyContainer>
       </Layout>
-      <DownloadCVButton selectedTheme={theme} />
+      <DownloadCVButton selectedTheme={theme} header={header} />
     </ThemeProvider>
   );
 }

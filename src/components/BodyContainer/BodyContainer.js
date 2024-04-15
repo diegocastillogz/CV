@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const BodyContainer = styled.div`
   padding: ${({ theme }) =>
-    `${theme.paddings.XSVerticalPadding} ${theme.paddings.MDHorizontalPadding}`};
+    `${theme.paddings.SVerticalPadding} ${theme.paddings.MDHorizontalPadding}`};
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     display: grid;
@@ -12,9 +12,9 @@ const BodyContainer = styled.div`
       "experience experience"
       "projects projects";
     grid-template-columns: calc(50% - 25px) calc(50% - 25px);
-    grid-row-gap: 5px;
+    grid-row-gap: ${({ theme }) => `${theme.paddings.XSVerticalPadding}`};
     grid-column-gap: 50px;
-    padding-bottom: 0px;
+    padding-bottom: 30px;
   }
 
   h2 {

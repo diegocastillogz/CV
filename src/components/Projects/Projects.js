@@ -26,7 +26,7 @@ const Projects = () => {
 
   return (
     <StyledProjectSection>
-      <h2>Projects</h2>
+      <h2>Personal Projects</h2>
       <StyledProjectsList>
         {repos
           ?.filter(({ name }) => name !== "CV")
@@ -53,6 +53,7 @@ const Projects = () => {
 
 const ProjectSubtitle = styled.h3`
   font-size: ${({ theme }) => theme.fonts.small.sectionTitle};
+  letter-spacing: 0.02px;
   display: flex;
   flex-direction: column;
   color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
@@ -83,6 +84,7 @@ const StyledProjectSection = styled.section`
 const ProjectParagraph = styled.p`
   margin-top: 7px;
   padding-left: 10px;
+  font-size: ${({ theme }) => theme.fonts.big.sectionParagraph};
   color: ${({ theme, hasTitleColor = false }) => {
     if (hasTitleColor) return theme.colors.titleFontColor;
     return theme.colors.subtitleFontColor;
@@ -95,12 +97,18 @@ const ProjectParagraph = styled.p`
 
 const StyledProjectsList = styled.ul`
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.tablet}`}) {
+    flex-direction: row;
+  }
 `;
 
 const StyledItemProjectsContainer = styled.li`
-  width: calc(50% - 30px);
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.tablet}`}) {
+    width: calc(50% - 30px);
+  }
   p {
     &:before {
       display: none;

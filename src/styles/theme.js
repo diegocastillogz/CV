@@ -39,7 +39,7 @@ export const lightColors = {
   bodyBackground: "#fff",
   headerBackground: "#374457",
   subheaderBackground: "#2c343f",
-
+  theme: "light",
   titleFontColor: "#000",
   subtitleFontColor: "#ef4f42",
   textFontColor: "#fff",
@@ -52,7 +52,7 @@ export const darkColors = {
   bodyBackground: "#222831",
   headerBackground: "#1B2430",
   subheaderBackground: "#393E46",
-
+  theme: "dark",
   titleFontColor: "#EEEEEE",
   subtitleFontColor: "#00ADB5",
   textFontColor: "#fff",

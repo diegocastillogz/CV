@@ -34,12 +34,19 @@ const StyledWorkExperienceSection = styled.section`
 
 const StyledWorkExperienceContainer = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   flex-wrap: wrap;
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.tablet}`}) {
+    flex-direction: row;
+  }
 `;
 
 const StyledExperienceItem = styled.div`
-  width: calc(50% - 25px);
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.tablet}`}) {
+    width: calc(50% - 25px);
+  }
 
   > h3 {
     text-transform: capitalize;
@@ -65,6 +72,9 @@ const StyledResponsibilityList = styled.ul`
 const StyledResponsibilityItem = styled.li`
   text-align: justify;
   margin-top: 5px;
+  p {
+    font-size: ${({ theme }) => theme.fonts.big.sectionParagraph};
+  }
 `;
 
 const StyleCompanyName = styled.h4`

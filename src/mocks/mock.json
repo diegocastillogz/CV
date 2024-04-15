@@ -32,8 +32,7 @@
         "url": "https://www.udistrital.edu.co",
         "date": "Oct 18,2016 - Nov 27, 2017",
         "description": [
-          "Designed and implemented a new web-based platform to automate the wage calculation process for teachers at a university, considering their qualifications, research, and other factors.",
-          "Created a streamlined process documentation flow to understand stakeholder interactions with the wage calculation process."
+          "Developed a web-based platform automating wage calculations for university teachers, integrating qualifications and research data. Streamlined process documentation for stakeholder comprehension. Successfully executed app implementation, integrating flow structures and updating research data."
         ]
       },
       {
@@ -42,8 +41,7 @@
         "url": "https://klym.com/co/",
         "date": "Mar 1, 2018 - Feb 11, 2019",
         "description": [
-          "Maintained an existing factoring web app, which allowed users to load their invoices and validate their information such as owner, date, and amount.",
-          "Built a new factoring web app for the company to handle invoice transfers between buyers and sellers, as well as added functions for loading and validating invoices."
+          "Improved factoring web apps by enhancing invoice processes, creating a seamless transfer system, and implementing call center feedback for better client interactions. These updates streamlined operations, increased accuracy, and emphasized a customer-centric approach, highlighting dedication to innovation and excellence."
         ]
       },
       {
@@ -52,8 +50,7 @@
         "url": "https://resuelvetudeuda.com",
         "date": "Feb 13, 2019 - Jul 4, 2021",
         "description": [
-          "Managed the development of a P2P lending platform that verified the personal information and credit scores of potential clients, enabling them to request credits from the company.",
-          "Facilitated connections to the government platform to verify a person's credit score, allowing for an interest rate to be set based on various factors such as demographic and economic variables."
+          "Managed the development of a P2P lending platform, ensuring accurate client data verification for credit requests. Facilitated credit score checks through government platforms, aiding in setting interest rates based on various factors. Developed a transparent platform to enhance credit visibility for customer service, managers, and clients, showcasing a dedication to efficient financial services."
         ]
       },
       {
@@ -62,8 +59,7 @@
         "url": "https://www.mercadolibre.com",
         "date": "Sep 13, 2021 - Abr 22, 2022",
         "description": [
-          "Developed a messaging feature for the company's fraud web app that allows clients and employees to chat with each other and track the status of claims, including integration with the bank's automatic response system.",
-          "Migrated an existing web app to a new platform with improved standards and implemented end-to-end testing, improved release flow, and increased unit testing coverage on frontend code."
+          "Implemented a messaging feature in the fraud web app for client-employee chats and claim status tracking, integrating with the bank's response system. Migrated a web app to a new platform with enhanced standards, improved release flow, and increased frontend testing. Collaborated on new fraud app features, including validating rejected bank payments."
         ]
       },
       {
@@ -72,8 +68,7 @@
         "url": "https://www.encora.com/",
         "date": "Abr 28, 2022 - current work",
         "description": [
-          "Maintained an existing web app that facilitated vehicle tech support, including appointments and mechanics assignments for clients.",
-          "Implemented new steps in the service appointment flow, enabling coordinators to manage technicians at Goodyear mechanical workshops."
+          "Managed a web app for vehicle tech support, handling appointments and mechanic assignments. Added steps in appointment flow for technician management at Goodyear workshops. Introduced a feature for scheduling periodic appointments for specific vehicle issues, like engine checks, improving service efficiency and client experience."
         ]
       }
     ],
