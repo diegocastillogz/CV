@@ -31,9 +31,18 @@ const DownloadCVButton = ({ selectedTheme, header }) => {
   return (
     <StyledDownloadCVButton
       onClick={async () => {
+        doc.setDrawColor(0);
+        doc.setFillColor(255, 0, 0);
+
         await doc.link(40, 110, 150, 20, { url: socialNetworks[0].href });
         await doc.link(240, 110, 150, 20, { url: socialNetworks[1].href });
         await doc.link(420, 110, 150, 20, { url: socialNetworks[2].href });
+        await doc.link(20, 735, 210, 15, {
+          url: "https://github.com/diegocastillogz/Wikipedia-genealogical-Tree",
+        });
+        await doc.link(25, 755, 200, 15, {
+          url: "https://wikipedia-genealogical-tree.netlify.app/",
+        });
 
         await doc.html(contentHTML, {
           callback: (doc) => {

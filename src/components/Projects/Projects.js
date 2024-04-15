@@ -1,9 +1,15 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
+import githubLightIcon from "assets/icons/github-light.png";
+import githubDarkIcon from "assets/icons/github-dark.png";
 
-const Projects = () => {
+const Projects = ({ selectedTheme }) => {
   const [repos, setRepos] = useState([]);
 
+  const icons = {
+    light: githubLightIcon,
+    dark: githubDarkIcon,
+  };
   const getGithubReposByUser = async (githubUsername = "diegocastillogz") => {
     try {
       const response = await fetch(
@@ -30,20 +36,25 @@ const Projects = () => {
       <StyledProjectsList>
         {repos
           ?.filter(({ name }) => name !== "CV")
-          ?.map(({ name, id, description, clone_url, topics, language }) => (
+          ?.map(({ name, id, description, clone_url, homepage, language }) => (
             <StyledItemProjectsContainer key={id}>
-              <ProjectSubtitle>
+              <ProjectTitle>
                 {name}
-                <a target="_blank" href={clone_url} rel="noreferrer">
-                  <ProjectParagraph hasTitleColor>
-                    {description}
-                  </ProjectParagraph>
+                <a href={clone_url}>
+                  <img
+                    src={icons[selectedTheme]}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  />
                 </a>
+              </ProjectTitle>
+              <ProjectSubtitle>
+                <ProjectParagraph>{homepage}</ProjectParagraph>
+                <ProjectParagraph hasTitleColor>{description}</ProjectParagraph>
               </ProjectSubtitle>
               <ProjectParagraph>
                 <span>Made on {language}</span>
               </ProjectParagraph>
-              <ProjectParagraph>{topics?.join(", ")}</ProjectParagraph>
             </StyledItemProjectsContainer>
           ))}
       </StyledProjectsList>
@@ -51,7 +62,27 @@ const Projects = () => {
   );
 };
 
-const ProjectSubtitle = styled.h3`
+const ProjectTitle = styled.h3`
+  font-size: ${({ theme }) => theme.fonts.small.sectionTitle};
+  letter-spacing: 0.02px;
+  display: flex;
+  color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
+  font-weight: 300;
+  margin-right: 7px;
+  a {
+    color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
+    img {
+      width: 20px;
+      margin-left: 7px;
+    }
+  }
+
+  @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
+    font-size: ${({ theme }) => theme.fonts.big.sectionTitle};
+  }
+`;
+
+const ProjectSubtitle = styled.p`
   font-size: ${({ theme }) => theme.fonts.small.sectionTitle};
   letter-spacing: 0.02px;
   display: flex;
@@ -59,9 +90,6 @@ const ProjectSubtitle = styled.h3`
   color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
   font-weight: 300;
   margin-right: 7px;
-  a {
-    color: ${({ theme }) => theme.colors.subtitleFontColor} !important;
-  }
 
   @media (min-width: ${({ theme }) => `${theme.breakpoints.laptop}`}) {
     font-size: ${({ theme }) => theme.fonts.big.sectionTitle};
