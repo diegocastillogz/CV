@@ -20,9 +20,6 @@ const WorkExperience = ({ experience }) => {
                       <p>{itemText}</p>
                     </StyledResponsibilityItem>
                   ))}
-                  <StyledTechStackItem>
-                    <span>Tech Stack:</span> {techstack}
-                  </StyledTechStackItem>
                 </StyledResponsibilityList>
               </StyledExperienceItem>
             )
