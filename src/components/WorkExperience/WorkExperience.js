@@ -6,22 +6,27 @@ const WorkExperience = ({ experience }) => {
       <h2>work experience</h2>
       <StyledWorkExperienceContainer>
         {experience
-          ?.map(({ position, company, date, description }, index) => (
-            <StyledExperienceItem key={index}>
-              <h3>{position}</h3>
-              <StyleCompanyName>{company}</StyleCompanyName>
-              <StyledDate>
-                <p>{date}</p>
-              </StyledDate>
-              <StyledResponsibilityList>
-                {description?.map((itemText, index) => (
-                  <StyledResponsibilityItem key={index}>
-                    <p>{itemText}</p>
-                  </StyledResponsibilityItem>
-                ))}
-              </StyledResponsibilityList>
-            </StyledExperienceItem>
-          ))
+          ?.map(
+            ({ position, company, date, description, techstack }, index) => (
+              <StyledExperienceItem key={index}>
+                <h3>{position}</h3>
+                <StyleCompanyName>{company}</StyleCompanyName>
+                <StyledDate>
+                  <p>{date}</p>
+                </StyledDate>
+                <StyledResponsibilityList>
+                  {description?.map((itemText, index) => (
+                    <StyledResponsibilityItem key={index}>
+                      <p>{itemText}</p>
+                    </StyledResponsibilityItem>
+                  ))}
+                  <StyledTechStackItem>
+                    <span>Tech Stack:</span> {techstack}
+                  </StyledTechStackItem>
+                </StyledResponsibilityList>
+              </StyledExperienceItem>
+            )
+          )
           .reverse()}
       </StyledWorkExperienceContainer>
     </StyledWorkExperienceSection>
@@ -81,6 +86,13 @@ const StyleCompanyName = styled.h4`
   font-weight 300;
   text-transform: capitalize;
   color: ${({ theme }) => theme.colors.subtitleFontColor};
+`;
+
+const StyledTechStackItem = styled.p`
+  font-weight: 600;
+  span {
+    color: ${({ theme }) => theme.colors.subtitleFontColor};
+  }
 `;
 
 export default WorkExperience;

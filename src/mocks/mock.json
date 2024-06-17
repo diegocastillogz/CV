@@ -33,7 +33,8 @@
         "date": "Oct 18,2016 - Nov 27, 2017",
         "description": [
           "Developed a web-based platform automating wage calculations for university teachers, integrating qualifications and research data. Streamlined process documentation for stakeholder comprehension. Successfully executed app implementation, integrating flow structures and updating research data."
-        ]
+        ],
+        "techstack": "Go, Angular"
       },
       {
         "position": "frontend Developer",
@@ -42,7 +43,8 @@
         "date": "Mar 1, 2018 - Feb 11, 2019",
         "description": [
           "Improved factoring web apps by enhancing invoice processes, creating a seamless transfer system, and implementing call center feedback for better client interactions. These updates streamlined operations, increased accuracy, and emphasized a customer-centric approach, highlighting dedication to innovation and excellence."
-        ]
+        ],
+        "techstack": "React, Angular"
       },
       {
         "position": "fullstack developer",
@@ -51,7 +53,8 @@
         "date": "Feb 13, 2019 - Jul 4, 2021",
         "description": [
           "Managed the development of a P2P lending platform, ensuring accurate client data verification for credit requests. Facilitated credit score checks through government platforms, aiding in setting interest rates based on various factors. Developed a transparent platform to enhance credit visibility for customer service, managers, and clients, showcasing a dedication to efficient financial services."
-        ]
+        ],
+        "techstack": "React, Elixir"
       },
       {
         "position": "senior analyst - IT",
@@ -60,16 +63,18 @@
         "date": "Sep 13, 2021 - Abr 22, 2022",
         "description": [
           "Implemented a messaging feature in the fraud web app for client-employee chats and claim status tracking, integrating with the bank's response system. Migrated a web app to a new platform with enhanced standards, improved release flow, and increased frontend testing. Collaborated on new fraud app features, including validating rejected bank payments."
-        ]
+        ],
+        "techstack": "React, Go"
       },
       {
         "position": "fullstack developer",
         "company": "encora (AndGo Goodyear)",
         "url": "https://www.encora.com/",
-        "date": "Abr 28, 2022 - current work",
+        "date": "Abr 28, 2022 - March 12, 2023",
         "description": [
           "Managed a web app for vehicle tech support, handling appointments and mechanic assignments. Added steps in appointment flow for technician management at Goodyear workshops. Introduced a feature for scheduling periodic appointments for specific vehicle issues, like engine checks, improving service efficiency and client experience."
-        ]
+        ],
+        "techstack": "React, Graphql, Cypress, Python"
       }
     ],
     "skills": [
