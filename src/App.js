@@ -37,7 +37,7 @@ function App() {
           <Skills skills={skills} />
           <Education education={education} />
           <Languages languages={languages} />
-          <Projects selectedTheme={theme} />
+          {/*  <Projects selectedTheme={theme} /> */}
           <ThemeSwitch selectedTheme={theme} toggleTheme={toggleTheme} />
         </BodyContainer>
       </Layout>
