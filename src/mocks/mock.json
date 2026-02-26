@@ -3,7 +3,7 @@
     "header": {
       "fullname": "Diego Castillo",
       "position": "Software Developer",
-      "description": "5+ years of experience as a developer specializing in agile methodologies and process enhancement. Proficient in application development and design,product design,testing,building,release,and maintenance for finance,education,commerce,and automotive industries. Skilled in delivering high-quality code for complex projects.",
+      "description": "Senior Developer with over 5 years of experience building high-traffic applications for the Finance, Automotive, and E-commerce sectors. Expert in React, React Native, and NestJS, with a proven track record of managing platforms for 3M+ users. I focus on creating scalable, data-driven user experiences while integrating modern Agentic Architecture to solve complex system design challenges. Skilled in using OpenSpec to structure how AI agents interact with internal services, ensuring reliable communication between frontend interfaces and autonomous backends.",
       "socialNetworks": [
         {
           "text": "diegocastillogz25@gmail.com",
@@ -30,7 +30,7 @@
         "position": "fullstack developer",
         "company": "universidad distrital francisco josé de caldas",
         "url": "https://www.udistrital.edu.co",
-        "date": "Oct 18,2016 - Nov 27, 2017",
+        "date": "Oct 2016 - Dec 2017",
         "description": [
           "Developed a web-based platform automating wage calculations for university teachers, integrating qualifications and research data. Streamlined process documentation for stakeholder comprehension. Successfully executed app implementation, integrating flow structures and updating research data."
         ],
@@ -40,19 +40,19 @@
         "position": "frontend Developer",
         "company": "Klym",
         "url": "https://klym.com/co/",
-        "date": "Mar 1, 2018 - Feb 11, 2019",
+        "date": "Feb 2018 - Feb 2019",
         "description": [
-          "Improved factoring web apps by enhancing invoice processes, creating a seamless transfer system, and implementing call center feedback for better client interactions. These updates streamlined operations, increased accuracy, and emphasized a customer-centric approach, highlighting dedication to innovation and excellence."
+          "I improved our factoring web apps by fixing how we process invoices and building a smoother system for money transfers. I also worked closely with the call center team to add features based on their feedback, which made talking to clients much easier. These changes made our daily work more accurate and helped the whole operation run faster."
         ],
         "techstack": "React, Angular"
       },
       {
         "position": "fullstack developer",
-        "company": "resuelve tu deuda",
-        "url": "https://resuelvetudeuda.com",
-        "date": "Feb 13, 2019 - Jul 4, 2021",
+        "company": "Bravo Crédito",
+        "url": "https://bravocredito.co",
+        "date": "Feb 2019 - Jul 2021",
         "description": [
-          "Managed the development of a P2P lending platform, ensuring accurate client data verification for credit requests. Facilitated credit score checks through government platforms, aiding in setting interest rates based on various factors. Developed a transparent platform to enhance credit visibility for customer service, managers, and clients, showcasing a dedication to efficient financial services."
+          "I managed the development of a Peer-to-Peer (P2P) lending site, focusing on verifying client data for loan requests. I integrated the platform with government databases to automate credit score checks, which helped the system set fair interest rates for each user. To make things more transparent, I built a dashboard that shows clear credit data to customers, support teams, and managers, making the entire lending process faster and easier to track."
         ],
         "techstack": "React, Elixir"
       },
@@ -60,9 +60,9 @@
         "position": "senior analyst - IT",
         "company": "mercadoLibre",
         "url": "https://www.mercadolibre.com",
-        "date": "Sep 13, 2021 - Abr 22, 2022",
+        "date": "Aug 2021 - Abr 2022",
         "description": [
-          "Implemented a messaging feature in the fraud web app for client-employee chats and claim status tracking, integrating with the bank's response system. Migrated a web app to a new platform with enhanced standards, improved release flow, and increased frontend testing. Collaborated on new fraud app features, including validating rejected bank payments."
+          "I built a secure chat and tracking tool for our fraud app so clients and employees could talk directly and check claim statuses in real-time. I also led the move of an old web app to a much better platform, where I set up new coding standards and added automated frontend testing to stop bugs from reaching users. Additionally, I worked on the core fraud features, specifically creating the logic to double-check and handle bank payments that were rejected."
         ],
         "techstack": "React, Go"
       },
@@ -70,9 +70,19 @@
         "position": "fullstack developer",
         "company": "encora (AndGo Goodyear)",
         "url": "https://www.encora.com/",
-        "date": "Abr 28, 2022 - March 12, 2024",
+        "date": "Abr 2022 - March 2024",
         "description": [
-          "Managed a web app for vehicle tech support, handling appointments and mechanic assignments. Added steps in appointment flow for technician management at Goodyear workshops. Introduced a feature for scheduling periodic appointments for specific vehicle issues, like engine checks, improving service efficiency and client experience."
+          "Engineered a specialized web platform for Goodyear automotive support, centralizing appointment logistics and technician dispatching. Orchestrated a custom workflow for workshop management that synchronized mechanic availability with real-time service demands. Developed a recurring maintenance module for high-priority diagnostics (e.g., engine performance), which optimized bay utilization and increased customer retention."
+        ],
+        "techstack": "React, Graphql, Cypress, Python"
+      },
+      {
+        "position": "Software Engineer",
+        "company": "Addi",
+        "url": "https://co.addi.com/",
+        "date": "Jul 2024 - current employeer",
+        "description": [
+          "I build and maintain high-traffic web and mobile apps (React and React Native) for an e-commerce platform with over 3 million users. My work focuses on making the shopping experience smooth and fast at scale. I use tools like Amplitude and LogRocket to track how users interact with the app, using that data to fix pain points and improve the UI with the design team. I also work on the backend using NestJS to build better middleware, making sure our internal services communicate clearly and stay reliable during peak traffic."
         ],
         "techstack": "React, Graphql, Cypress, Python"
       }
@@ -86,7 +96,7 @@
       {
         "text": "extensive",
         "experience": "3+ years of experience",
-        "list": "Typescript, Unit Testing, Graphql, E2E Testing (Cypress)"
+        "list": "Typescript, Unit Testing, Graphql, E2E Testing (Cypress), React Native, NestJS"
       },
       {
         "text": "solid",
@@ -96,7 +106,7 @@
       {
         "text": "explorative",
         "experience": "1+ years of experience",
-        "list": "Remix, NextJS, AWS S3, AWS EC2"
+        "list": "Remix, NextJS, AWS S3, AWS EC2, Claude Dev, Windsurf"
       }
     ],
     "education": [
@@ -114,7 +124,6 @@
         "language": "english",
         "label": "professional"
       }
-    ],
-    "interests": ["videogames", "sports", "3D modelling", "technology", "music"]
+    ]
   }
 }
